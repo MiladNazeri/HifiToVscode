@@ -22,7 +22,7 @@ var vsCodeArray = [];
                 item.longname,
                 item.name,
                 [
-                    item.longname
+                    item.name
                 ],
                 item.description
             )
@@ -48,15 +48,15 @@ var vsCodeArray = [];
     var convertedArray = vsCodeArray.map(vcObject => JSONConvert(vcObject))
     // console.log("convertedArray \n", convertedArray);
 
-var stringToWrite = `
-        [
-            ${convertedArray.join(",")}
-        ]
-    `
-
-    // console.log(stringToWrite);
-
 // write file
+
+    var stringToWrite = `
+            [
+                \t${convertedArray.join(",\n\t")}
+            ]
+        `
+    // console.log(stringToWrite);
+    
     fs.writeFileSync(path.join(__dirname, 'out', 'hifiVsCode.json'), stringToWrite);
 
 
