@@ -5,7 +5,7 @@ var vsCodeArray = [];
 
 // load jsdoc
     var hifiDoc = require('./hifiJSDoc.json');
-    console.log("hifiDoc \n", hifiDoc);
+    // console.log("hifiDoc \n", hifiDoc);
 
 // create VsCode mapping
     function VSCodeMappingObject(name, prefix, body, description){
@@ -16,7 +16,7 @@ var vsCodeArray = [];
     }
 
 // iterate hifiDoc
-    hifiDoc.forEach(function(item){
+    hifiDoc.forEach( item => {
         vsCodeArray.push(
             new VSCodeMappingObject(
                 item.longname,
@@ -28,7 +28,7 @@ var vsCodeArray = [];
             )
         )
     });
-    console.log("VSCodeMappingObject \n", vsCodeArray);
+    // console.log("VSCodeMappingObject \n", vsCodeArray);
     
 
 // Convert to JSON format
@@ -45,10 +45,8 @@ var vsCodeArray = [];
     }
 
 // convert array
-    var convertedArray = vsCodeArray.map(function(vcObject){
-        return JSONConvert(vcObject);
-    })
-    console.log("convertedArray \n", convertedArray);
+    var convertedArray = vsCodeArray.map(vcObject => JSONConvert(vcObject))
+    // console.log("convertedArray \n", convertedArray);
 
 var stringToWrite = `
         [
@@ -56,7 +54,7 @@ var stringToWrite = `
         ]
     `
 
-    console.log(stringToWrite);
+    // console.log(stringToWrite);
 
 // write file
     fs.writeFileSync(path.join(__dirname, 'out', 'hifiVsCode.json'), stringToWrite);
