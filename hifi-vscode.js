@@ -15,15 +15,26 @@ var vsCodeArray = [];
         this.description = description;
     }
 
+// {$1:ray: PickRay}
 // iterate hifiDoc
     hifiDoc.forEach( item => {
+        let body = ``;
+        let bodyParams = [];
+        if (item.params){
+            bodyParams = item.params.map( (param, index) => {
+                return `\${${index+1}:${param.name}${param.type?`\: ${param.type.names[0]}`:''}}`
+            })
+            body = [`${item.longname}(${`${bodyParams.join(',')}`})`];
+        } else {
+            body = [item.longname];
+        }
+
+        
         vsCodeArray.push(
             new VSCodeMappingObject(
-                item.longname,
                 item.name,
-                [
-                    item.name
-                ],
+                item.longname,
+                body,
                 item.description
             )
         )
@@ -35,7 +46,7 @@ var vsCodeArray = [];
     function JSONConvert(VSCodeMappingObject){
         var ObjectForJSON = {};
 
-        ObjectForJSON[VSCodeMappingObject.name] = {
+        ObjectForJSON[VSCodeMappingObject.prefix] = {
             prefix: VSCodeMappingObject.prefix,
             body: VSCodeMappingObject.body,
             description: VSCodeMappingObject.description
