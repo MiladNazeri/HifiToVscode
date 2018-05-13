@@ -1,5 +1,354 @@
 [
     {
+        "kind": "namespace",
+        "name": "Agent",
+        "hifiAssignmentClient": true,
+        "properties": [
+            {
+                "type": {
+                    "names": [
+                        "boolean"
+                    ]
+                },
+                "name": "isAvatar"
+            },
+            {
+                "type": {
+                    "names": [
+                        "boolean"
+                    ]
+                },
+                "description": "<em>Read-only.</em>",
+                "name": "isPlayingAvatarSound"
+            },
+            {
+                "type": {
+                    "names": [
+                        "boolean"
+                    ]
+                },
+                "name": "isListeningToAudioStream"
+            },
+            {
+                "type": {
+                    "names": [
+                        "boolean"
+                    ]
+                },
+                "name": "isNoiseGateEnabled"
+            },
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ]
+                },
+                "description": "<em>Read-only.</em>",
+                "name": "lastReceivedAudioLoudness"
+            },
+            {
+                "type": {
+                    "names": [
+                        "Uuid"
+                    ]
+                },
+                "description": "<em>Read-only.</em>",
+                "name": "sessionUUID"
+            }
+        ],
+        "longname": "Agent",
+        "scope": "global",
+        "description": "<br><br><table><tr><th>Available in:</th><td>Assignment Client Scripts</td></tr></table>"
+    },
+    {
+        "kind": "function",
+        "name": "run",
+        "memberof": "Agent",
+        "longname": "Agent.run",
+        "scope": "static"
+    },
+    {
+        "kind": "function",
+        "name": "playAvatarSound",
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "object"
+                    ]
+                },
+                "name": "avatarSound"
+            }
+        ],
+        "memberof": "Agent",
+        "longname": "Agent.playAvatarSound",
+        "scope": "static"
+    },
+    {
+        "kind": "function",
+        "name": "setIsAvatar",
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "boolean"
+                    ]
+                },
+                "name": "isAvatar"
+            }
+        ],
+        "memberof": "Agent",
+        "longname": "Agent.setIsAvatar",
+        "scope": "static"
+    },
+    {
+        "kind": "function",
+        "name": "isAvatar",
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "boolean"
+                    ]
+                }
+            }
+        ],
+        "memberof": "Agent",
+        "longname": "Agent.isAvatar",
+        "scope": "static"
+    },
+    {
+        "kind": "namespace",
+        "name": "EntityViewer",
+        "hifiAssignmentClient": true,
+        "longname": "EntityViewer",
+        "scope": "global",
+        "description": "<br><br><table><tr><th>Available in:</th><td>Assignment Client Scripts</td></tr></table>"
+    },
+    {
+        "kind": "function",
+        "name": "queryOctree",
+        "memberof": "EntityViewer",
+        "longname": "EntityViewer.queryOctree",
+        "scope": "static"
+    },
+    {
+        "kind": "function",
+        "name": "setPosition",
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "Vec3"
+                    ]
+                },
+                "name": "position"
+            }
+        ],
+        "memberof": "EntityViewer",
+        "longname": "EntityViewer.setPosition",
+        "scope": "static"
+    },
+    {
+        "kind": "function",
+        "name": "setOrientation",
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "Quat"
+                    ]
+                },
+                "name": "orientation"
+            }
+        ],
+        "memberof": "EntityViewer",
+        "longname": "EntityViewer.setOrientation",
+        "scope": "static"
+    },
+    {
+        "kind": "function",
+        "name": "setCenterRadius",
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ]
+                },
+                "name": "radius"
+            }
+        ],
+        "memberof": "EntityViewer",
+        "longname": "EntityViewer.setCenterRadius",
+        "scope": "static"
+    },
+    {
+        "kind": "function",
+        "name": "setKeyholeRadius",
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ]
+                },
+                "name": "radius"
+            }
+        ],
+        "deprecated": "Use {@link EntityViewer.setCenterRadius|setCenterRadius} instead.",
+        "memberof": "EntityViewer",
+        "longname": "EntityViewer.setKeyholeRadius",
+        "scope": "static"
+    },
+    {
+        "kind": "function",
+        "name": "setVoxelSizeScale",
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ]
+                },
+                "name": "sizeScale"
+            }
+        ],
+        "memberof": "EntityViewer",
+        "longname": "EntityViewer.setVoxelSizeScale",
+        "scope": "static"
+    },
+    {
+        "kind": "function",
+        "name": "setBoundaryLevelAdjust",
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ]
+                },
+                "name": "boundaryLevelAdjust"
+            }
+        ],
+        "memberof": "EntityViewer",
+        "longname": "EntityViewer.setBoundaryLevelAdjust",
+        "scope": "static"
+    },
+    {
+        "kind": "function",
+        "name": "setMaxPacketsPerSecond",
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ]
+                },
+                "name": "maxPacketsPerSecond"
+            }
+        ],
+        "memberof": "EntityViewer",
+        "longname": "EntityViewer.setMaxPacketsPerSecond",
+        "scope": "static"
+    },
+    {
+        "kind": "function",
+        "name": "getPosition",
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Vec3"
+                    ]
+                }
+            }
+        ],
+        "memberof": "EntityViewer",
+        "longname": "EntityViewer.getPosition",
+        "scope": "static"
+    },
+    {
+        "kind": "function",
+        "name": "getOrientation",
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Quat"
+                    ]
+                }
+            }
+        ],
+        "memberof": "EntityViewer",
+        "longname": "EntityViewer.getOrientation",
+        "scope": "static"
+    },
+    {
+        "kind": "function",
+        "name": "getVoxelSizeScale",
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ]
+                }
+            }
+        ],
+        "memberof": "EntityViewer",
+        "longname": "EntityViewer.getVoxelSizeScale",
+        "scope": "static"
+    },
+    {
+        "kind": "function",
+        "name": "getBoundaryLevelAdjust",
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ]
+                }
+            }
+        ],
+        "memberof": "EntityViewer",
+        "longname": "EntityViewer.getBoundaryLevelAdjust",
+        "scope": "static"
+    },
+    {
+        "kind": "function",
+        "name": "getMaxPacketsPerSecond",
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ]
+                }
+            }
+        ],
+        "memberof": "EntityViewer",
+        "longname": "EntityViewer.getMaxPacketsPerSecond",
+        "scope": "static"
+    },
+    {
+        "kind": "function",
+        "name": "getOctreeElementsCount",
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ]
+                }
+            }
+        ],
+        "memberof": "EntityViewer",
+        "longname": "EntityViewer.getOctreeElementsCount",
+        "scope": "static"
+    },
+    {
         "description": "<p>The <code>Controller.Hardware.Application</code> object has properties representing Interface's state. The property \rvalues are integer IDs, uniquely identifying each output. <em>Read-only.</em> These can be mapped to actions or functions or \r<code>Controller.Standard</code> items in a {@link RouteObject} mapping (e.g., using the {@link RouteObject#when} method).\rEach data value is either <code>1.0</code> for \"true\" or <code>0.0</code> for \"false\".</p>\r<table>\r  <thead>\r    <tr><th>Property</th><th>Type</th><th>Data</th><th>Description</th></tr>\r  </thead>\r  <tbody>\r    <tr><td><code>CameraFirstPerson</code></td><td>number</td><td>number</td><td>The camera is in first-person mode.\r      </td></tr>\r    <tr><td><code>CameraThirdPerson</code></td><td>number</td><td>number</td><td>The camera is in third-person mode.\r      </td></tr>\r    <tr><td><code>CameraFSM</code></td><td>number</td><td>number</td><td>The camera is in full screen mirror mode.</td></tr>\r    <tr><td><code>CameraIndependent</code></td><td>number</td><td>number</td><td>The camera is in independent mode.</td></tr>\r    <tr><td><code>CameraEntity</code></td><td>number</td><td>number</td><td>The camera is in entity mode.</td></tr>\r    <tr><td><code>InHMD</code></td><td>number</td><td>number</td><td>The user is in HMD mode.</td></tr>\r    <tr><td><code>AdvancedMovement</code></td><td>number</td><td>number</td><td>Advanced movement controls are enabled.\r      </td></tr>\r    <tr><td><code>SnapTurn</code></td><td>number</td><td>number</td><td>Snap turn is enabled.</td></tr>\r    <tr><td><code>Grounded</code></td><td>number</td><td>number</td><td>The user's avatar is on the ground.</td></tr>\r    <tr><td><code>NavigationFocused</code></td><td>number</td><td>number</td><td><em>Not used.</em></td></tr>\r  </tbody>\r</table>",
         "kind": "typedef",
         "name": "Hardware-Application",
@@ -29,6 +378,13 @@
         "name": "deleteBookmark",
         "memberof": "AvatarBookmarks",
         "longname": "AvatarBookmarks.deleteBookmark",
+        "scope": "static"
+    },
+    {
+        "kind": "function",
+        "name": "deleteBookmark",
+        "memberof": "LocationBookmarks",
+        "longname": "LocationBookmarks.deleteBookmark",
         "scope": "static"
     },
     {
@@ -69,6 +425,39 @@
         ],
         "memberof": "Camera",
         "longname": "Camera.setCameraEntity",
+        "scope": "static"
+    },
+    {
+        "kind": "namespace",
+        "name": "LocationBookmarks",
+        "hifiClientEntity": true,
+        "hifiInterface": true,
+        "longname": "LocationBookmarks",
+        "scope": "global",
+        "description": "<br><br><table><tr><th>Available in:</th><td>Interface Scripts</td><td>Client Entity Scripts</td></tr></table>"
+    },
+    {
+        "kind": "function",
+        "name": "addBookmark",
+        "memberof": "LocationBookmarks",
+        "longname": "LocationBookmarks.addBookmark",
+        "scope": "static"
+    },
+    {
+        "kind": "function",
+        "name": "setHomeLocationToAddress",
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "string"
+                    ]
+                },
+                "name": "address"
+            }
+        ],
+        "memberof": "LocationBookmarks",
+        "longname": "LocationBookmarks.setHomeLocationToAddress",
         "scope": "static"
     },
     {
@@ -4484,6 +4873,3559 @@
         "scope": "static"
     },
     {
+        "kind": "namespace",
+        "name": "Snapshot",
+        "hifiInterface": true,
+        "hifiClientEntity": true,
+        "longname": "Snapshot",
+        "scope": "global",
+        "description": "<br><br><table><tr><th>Available in:</th><td>Interface Scripts</td><td>Client Entity Scripts</td></tr></table>"
+    },
+    {
+        "kind": "function",
+        "name": "snapshotLocationSet",
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "string"
+                    ]
+                },
+                "name": "location"
+            }
+        ],
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Signal"
+                    ]
+                }
+            }
+        ],
+        "memberof": "Snapshot",
+        "longname": "Snapshot.snapshotLocationSet",
+        "scope": "static"
+    },
+    {
+        "kind": "function",
+        "name": "getSnapshotsLocation",
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "string"
+                    ]
+                }
+            }
+        ],
+        "memberof": "Snapshot",
+        "longname": "Snapshot.getSnapshotsLocation",
+        "scope": "static"
+    },
+    {
+        "kind": "function",
+        "name": "setSnapshotsLocation",
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "String"
+                    ]
+                },
+                "name": "location"
+            }
+        ],
+        "memberof": "Snapshot",
+        "longname": "Snapshot.setSnapshotsLocation",
+        "scope": "static"
+    },
+    {
+        "kind": "namespace",
+        "name": "Stats",
+        "hifiInterface": true,
+        "hifiClientEntity": true,
+        "hifiServerEntity": true,
+        "hifiAssignmentClient": true,
+        "properties": [
+            {
+                "type": {
+                    "names": [
+                        "boolean"
+                    ]
+                },
+                "name": "expanded"
+            },
+            {
+                "type": {
+                    "names": [
+                        "boolean"
+                    ]
+                },
+                "description": "<em>Read-only.</em>",
+                "name": "timingExpanded"
+            },
+            {
+                "type": {
+                    "names": [
+                        "string"
+                    ]
+                },
+                "description": "<em>Read-only.</em>",
+                "name": "monospaceFont"
+            },
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ]
+                },
+                "description": "<em>Read-only.</em>",
+                "name": "serverCount"
+            },
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ]
+                },
+                "description": "How often the app is creating new gpu::Frames. <em>Read-only.</em>",
+                "name": "renderrate"
+            },
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ]
+                },
+                "description": "How often the display plugin is presenting to the device. <em>Read-only.</em>",
+                "name": "presentrate"
+            },
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ]
+                },
+                "description": "How often the display device is reprojecting old frames. <em>Read-only.</em>",
+                "name": "stutterrate"
+            },
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ]
+                },
+                "description": "<em>Read-only.</em>",
+                "name": "appdropped"
+            },
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ]
+                },
+                "description": "<em>Read-only.</em>",
+                "name": "longsubmits"
+            },
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ]
+                },
+                "description": "<em>Read-only.</em>",
+                "name": "longrenders"
+            },
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ]
+                },
+                "description": "<em>Read-only.</em>",
+                "name": "longframes"
+            },
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ]
+                },
+                "description": "<em>Read-only.</em>",
+                "name": "presentnewrate"
+            },
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ]
+                },
+                "description": "<em>Read-only.</em>",
+                "name": "presentdroprate"
+            },
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ]
+                },
+                "description": "<em>Read-only.</em>",
+                "name": "gameLoopRate"
+            },
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ]
+                },
+                "description": "<em>Read-only.</em>",
+                "name": "avatarCount"
+            },
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ]
+                },
+                "description": "<em>Read-only.</em>",
+                "name": "updatedAvatarCount"
+            },
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ]
+                },
+                "description": "<em>Read-only.</em>",
+                "name": "notUpdatedAvatarCount"
+            },
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ]
+                },
+                "description": "<em>Read-only.</em>",
+                "name": "packetInCount"
+            },
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ]
+                },
+                "description": "<em>Read-only.</em>",
+                "name": "packetOutCount"
+            },
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ]
+                },
+                "description": "<em>Read-only.</em>",
+                "name": "mbpsIn"
+            },
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ]
+                },
+                "description": "<em>Read-only.</em>",
+                "name": "mbpsOut"
+            },
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ]
+                },
+                "description": "<em>Read-only.</em>",
+                "name": "assetMbpsIn"
+            },
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ]
+                },
+                "description": "<em>Read-only.</em>",
+                "name": "assetMbpsOut"
+            },
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ]
+                },
+                "description": "<em>Read-only.</em>",
+                "name": "audioPing"
+            },
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ]
+                },
+                "description": "<em>Read-only.</em>",
+                "name": "avatarPing"
+            },
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ]
+                },
+                "description": "<em>Read-only.</em>",
+                "name": "entitiesPing"
+            },
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ]
+                },
+                "description": "<em>Read-only.</em>",
+                "name": "assetPing"
+            },
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ]
+                },
+                "description": "<em>Read-only.</em>",
+                "name": "messagePing"
+            },
+            {
+                "type": {
+                    "names": [
+                        "Vec3"
+                    ]
+                },
+                "description": "<em>Read-only.</em>",
+                "name": "position"
+            },
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ]
+                },
+                "description": "<em>Read-only.</em>",
+                "name": "speed"
+            },
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ]
+                },
+                "description": "<em>Read-only.</em>",
+                "name": "yaw"
+            },
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ]
+                },
+                "description": "<em>Read-only.</em>",
+                "name": "avatarMixerInKbps"
+            },
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ]
+                },
+                "description": "<em>Read-only.</em>",
+                "name": "avatarMixerInPps"
+            },
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ]
+                },
+                "description": "<em>Read-only.</em>",
+                "name": "avatarMixerOutKbps"
+            },
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ]
+                },
+                "description": "<em>Read-only.</em>",
+                "name": "avatarMixerOutPps"
+            },
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ]
+                },
+                "description": "<em>Read-only.</em>",
+                "name": "myAvatarSendRate"
+            },
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ]
+                },
+                "description": "<em>Read-only.</em>",
+                "name": "audioMixerInKbps"
+            },
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ]
+                },
+                "description": "<em>Read-only.</em>",
+                "name": "audioMixerInPps"
+            },
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ]
+                },
+                "description": "<em>Read-only.</em>",
+                "name": "audioMixerOutKbps"
+            },
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ]
+                },
+                "description": "<em>Read-only.</em>",
+                "name": "audioMixerOutPps"
+            },
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ]
+                },
+                "description": "<em>Read-only.</em>",
+                "name": "audioMixerKbps"
+            },
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ]
+                },
+                "description": "<em>Read-only.</em>",
+                "name": "audioMixerPps"
+            },
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ]
+                },
+                "description": "<em>Read-only.</em>",
+                "name": "audioOutboundPPS"
+            },
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ]
+                },
+                "description": "<em>Read-only.</em>",
+                "name": "audioSilentOutboundPPS"
+            },
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ]
+                },
+                "description": "<em>Read-only.</em>",
+                "name": "audioAudioInboundPPS"
+            },
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ]
+                },
+                "description": "<em>Read-only.</em>",
+                "name": "audioSilentInboundPPS"
+            },
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ]
+                },
+                "description": "<em>Read-only.</em>",
+                "name": "audioPacketLoss"
+            },
+            {
+                "type": {
+                    "names": [
+                        "string"
+                    ]
+                },
+                "description": "<em>Read-only.</em>",
+                "name": "audioCodec"
+            },
+            {
+                "type": {
+                    "names": [
+                        "string"
+                    ]
+                },
+                "description": "<em>Read-only.</em>",
+                "name": "audioNoiseGate"
+            },
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ]
+                },
+                "description": "<em>Read-only.</em>",
+                "name": "entityPacketsInKbps"
+            },
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ]
+                },
+                "description": "<em>Read-only.</em>",
+                "name": "downloads"
+            },
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ]
+                },
+                "description": "<em>Read-only.</em>",
+                "name": "downloadLimit"
+            },
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ]
+                },
+                "description": "<em>Read-only.</em>",
+                "name": "downloadsPending"
+            },
+            {
+                "type": {
+                    "names": [
+                        "Array.<string>"
+                    ]
+                },
+                "description": "<em>Read-only.</em>",
+                "name": "downloadUrls"
+            },
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ]
+                },
+                "description": "<em>Read-only.</em>",
+                "name": "processing"
+            },
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ]
+                },
+                "description": "<em>Read-only.</em>",
+                "name": "processingPending"
+            },
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ]
+                },
+                "description": "<em>Read-only.</em>",
+                "name": "triangles"
+            },
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ]
+                },
+                "description": "<em>Read-only.</em>",
+                "name": "quads"
+            },
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ]
+                },
+                "description": "<em>Read-only.</em>",
+                "name": "materialSwitches"
+            },
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ]
+                },
+                "description": "<em>Read-only.</em>",
+                "name": "itemConsidered"
+            },
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ]
+                },
+                "description": "<em>Read-only.</em>",
+                "name": "itemOutOfView"
+            },
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ]
+                },
+                "description": "<em>Read-only.</em>",
+                "name": "itemTooSmall"
+            },
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ]
+                },
+                "description": "<em>Read-only.</em>",
+                "name": "itemRendered"
+            },
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ]
+                },
+                "description": "<em>Read-only.</em>",
+                "name": "shadowConsidered"
+            },
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ]
+                },
+                "description": "<em>Read-only.</em>",
+                "name": "shadowOutOfView"
+            },
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ]
+                },
+                "description": "<em>Read-only.</em>",
+                "name": "shadowTooSmall"
+            },
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ]
+                },
+                "description": "<em>Read-only.</em>",
+                "name": "shadowRendered"
+            },
+            {
+                "type": {
+                    "names": [
+                        "string"
+                    ]
+                },
+                "description": "<em>Read-only.</em>",
+                "name": "sendingMode"
+            },
+            {
+                "type": {
+                    "names": [
+                        "string"
+                    ]
+                },
+                "description": "<em>Read-only.</em>",
+                "name": "packetStats"
+            },
+            {
+                "type": {
+                    "names": [
+                        "string"
+                    ]
+                },
+                "description": "<em>Read-only.</em>",
+                "name": "lodStatus"
+            },
+            {
+                "type": {
+                    "names": [
+                        "string"
+                    ]
+                },
+                "description": "<em>Read-only.</em>",
+                "name": "timingStats"
+            },
+            {
+                "type": {
+                    "names": [
+                        "string"
+                    ]
+                },
+                "description": "<em>Read-only.</em>",
+                "name": "gameUpdateStats"
+            },
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ]
+                },
+                "description": "<em>Read-only.</em>",
+                "name": "serverElements"
+            },
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ]
+                },
+                "description": "<em>Read-only.</em>",
+                "name": "serverInternal"
+            },
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ]
+                },
+                "description": "<em>Read-only.</em>",
+                "name": "serverLeaves"
+            },
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ]
+                },
+                "description": "<em>Read-only.</em>",
+                "name": "localElements"
+            },
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ]
+                },
+                "description": "<em>Read-only.</em>",
+                "name": "localInternal"
+            },
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ]
+                },
+                "description": "<em>Read-only.</em>",
+                "name": "localLeaves"
+            },
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ]
+                },
+                "description": "<em>Read-only.</em>",
+                "name": "rectifiedTextureCount"
+            },
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ]
+                },
+                "description": "<em>Read-only.</em>",
+                "name": "decimatedTextureCount"
+            },
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ]
+                },
+                "description": "<em>Read-only.</em>",
+                "name": "gpuBuffers"
+            },
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ]
+                },
+                "description": "<em>Read-only.</em>",
+                "name": "gpuBufferMemory"
+            },
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ]
+                },
+                "description": "<em>Read-only.</em>",
+                "name": "gpuTextures"
+            },
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ]
+                },
+                "description": "<em>Read-only.</em>",
+                "name": "glContextSwapchainMemory"
+            },
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ]
+                },
+                "description": "<em>Read-only.</em>",
+                "name": "qmlTextureMemory"
+            },
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ]
+                },
+                "description": "<em>Read-only.</em>",
+                "name": "texturePendingTransfers"
+            },
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ]
+                },
+                "description": "<em>Read-only.</em>",
+                "name": "gpuTextureMemory"
+            },
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ]
+                },
+                "description": "<em>Read-only.</em>",
+                "name": "gpuTextureResidentMemory"
+            },
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ]
+                },
+                "description": "<em>Read-only.</em>",
+                "name": "gpuTextureFramebufferMemory"
+            },
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ]
+                },
+                "description": "<em>Read-only.</em>",
+                "name": "gpuTextureResourceMemory"
+            },
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ]
+                },
+                "description": "<em>Read-only.</em>",
+                "name": "gpuTextureResourcePopulatedMemory"
+            },
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ]
+                },
+                "description": "<em>Read-only.</em>",
+                "name": "gpuTextureExternalMemory"
+            },
+            {
+                "type": {
+                    "names": [
+                        "string"
+                    ]
+                },
+                "description": "<em>Read-only.</em>",
+                "name": "gpuTextureMemoryPressureState"
+            },
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ]
+                },
+                "description": "<em>Read-only.</em>",
+                "name": "gpuFreeMemory"
+            },
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ]
+                },
+                "description": "<em>Read-only.</em>",
+                "name": "gpuFrameTime"
+            },
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ]
+                },
+                "description": "<em>Read-only.</em>",
+                "name": "batchFrameTime"
+            },
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ]
+                },
+                "description": "<em>Read-only.</em>",
+                "name": "engineFrameTime"
+            },
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ]
+                },
+                "description": "<em>Read-only.</em>",
+                "name": "avatarSimulationTime"
+            },
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ]
+                },
+                "name": "x"
+            },
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ]
+                },
+                "name": "y"
+            },
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ]
+                },
+                "name": "z"
+            },
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ]
+                },
+                "name": "width"
+            },
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ]
+                },
+                "name": "height"
+            },
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ]
+                },
+                "name": "opacity"
+            },
+            {
+                "type": {
+                    "names": [
+                        "boolean"
+                    ]
+                },
+                "name": "enabled"
+            },
+            {
+                "type": {
+                    "names": [
+                        "boolean"
+                    ]
+                },
+                "name": "visible"
+            },
+            {
+                "type": {
+                    "names": [
+                        "string"
+                    ]
+                },
+                "name": "state"
+            },
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ]
+                },
+                "name": "baselineOffset"
+            },
+            {
+                "type": {
+                    "names": [
+                        "boolean"
+                    ]
+                },
+                "name": "clip"
+            },
+            {
+                "type": {
+                    "names": [
+                        "boolean"
+                    ]
+                },
+                "name": "focus"
+            },
+            {
+                "type": {
+                    "names": [
+                        "boolean"
+                    ]
+                },
+                "description": "<em>Read-only.</em>",
+                "name": "activeFocus"
+            },
+            {
+                "type": {
+                    "names": [
+                        "boolean"
+                    ]
+                },
+                "name": "activeFocusOnTab"
+            },
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ]
+                },
+                "name": "rotation"
+            },
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ]
+                },
+                "name": "scale"
+            },
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ]
+                },
+                "name": "transformOrigin"
+            },
+            {
+                "type": {
+                    "names": [
+                        "boolean"
+                    ]
+                },
+                "name": "smooth"
+            },
+            {
+                "type": {
+                    "names": [
+                        "boolean"
+                    ]
+                },
+                "name": "antialiasing"
+            },
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ]
+                },
+                "name": "implicitWidth"
+            },
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ]
+                },
+                "name": "implicitHeight"
+            }
+        ],
+        "longname": "Stats",
+        "scope": "global",
+        "description": "<br><br><table><tr><th>Available in:</th><td>Interface Scripts</td><td>Client Entity Scripts</td><td>Server Entity Scripts</td><td>Assignment Client Scripts</td></tr></table>"
+    },
+    {
+        "description": "Triggered when the value of the <code>longsubmits</code> property changes.",
+        "kind": "function",
+        "name": "longsubmitsChanged",
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Signal"
+                    ]
+                }
+            }
+        ],
+        "memberof": "Stats",
+        "longname": "Stats.longsubmitsChanged",
+        "scope": "static"
+    },
+    {
+        "description": "Triggered when the value of the <code>longrenders</code> property changes.",
+        "kind": "function",
+        "name": "longrendersChanged",
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Signal"
+                    ]
+                }
+            }
+        ],
+        "memberof": "Stats",
+        "longname": "Stats.longrendersChanged",
+        "scope": "static"
+    },
+    {
+        "description": "Triggered when the value of the <code>longframes</code> property changes.",
+        "kind": "function",
+        "name": "longframesChanged",
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Signal"
+                    ]
+                }
+            }
+        ],
+        "memberof": "Stats",
+        "longname": "Stats.longframesChanged",
+        "scope": "static"
+    },
+    {
+        "description": "Triggered when the value of the <code>appdropped</code> property changes.",
+        "kind": "function",
+        "name": "appdroppedChanged",
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Signal"
+                    ]
+                }
+            }
+        ],
+        "memberof": "Stats",
+        "longname": "Stats.appdroppedChanged",
+        "scope": "static"
+    },
+    {
+        "description": "Triggered when the value of the <code>expanded</code> property changes.",
+        "kind": "function",
+        "name": "expandedChanged",
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Signal"
+                    ]
+                }
+            }
+        ],
+        "memberof": "Stats",
+        "longname": "Stats.expandedChanged",
+        "scope": "static"
+    },
+    {
+        "description": "Triggered when the value of the <code>timingExpanded</code> property changes.",
+        "kind": "function",
+        "name": "timingExpandedChanged",
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Signal"
+                    ]
+                }
+            }
+        ],
+        "memberof": "Stats",
+        "longname": "Stats.timingExpandedChanged",
+        "scope": "static"
+    },
+    {
+        "description": "Triggered when the value of the <code>serverCount</code> property changes.",
+        "kind": "function",
+        "name": "serverCountChanged",
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Signal"
+                    ]
+                }
+            }
+        ],
+        "memberof": "Stats",
+        "longname": "Stats.serverCountChanged",
+        "scope": "static"
+    },
+    {
+        "description": "Triggered when the value of the <code>renderrate</code> property changes.",
+        "kind": "function",
+        "name": "renderrateChanged",
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Signal"
+                    ]
+                }
+            }
+        ],
+        "memberof": "Stats",
+        "longname": "Stats.renderrateChanged",
+        "scope": "static"
+    },
+    {
+        "description": "Triggered when the value of the <code>presentrate</code> property changes.",
+        "kind": "function",
+        "name": "presentrateChanged",
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Signal"
+                    ]
+                }
+            }
+        ],
+        "memberof": "Stats",
+        "longname": "Stats.presentrateChanged",
+        "scope": "static"
+    },
+    {
+        "description": "Triggered when the value of the <code>presentnewrate</code> property changes.",
+        "kind": "function",
+        "name": "presentnewrateChanged",
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Signal"
+                    ]
+                }
+            }
+        ],
+        "memberof": "Stats",
+        "longname": "Stats.presentnewrateChanged",
+        "scope": "static"
+    },
+    {
+        "description": "Triggered when the value of the <code>presentdroprate</code> property changes.",
+        "kind": "function",
+        "name": "presentdroprateChanged",
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Signal"
+                    ]
+                }
+            }
+        ],
+        "memberof": "Stats",
+        "longname": "Stats.presentdroprateChanged",
+        "scope": "static"
+    },
+    {
+        "description": "Triggered when the value of the <code>stutterrate</code> property changes.",
+        "kind": "function",
+        "name": "stutterrateChanged",
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Signal"
+                    ]
+                }
+            }
+        ],
+        "memberof": "Stats",
+        "longname": "Stats.stutterrateChanged",
+        "scope": "static"
+    },
+    {
+        "description": "Triggered when the value of the <code>gameLoopRate</code> property changes.",
+        "kind": "function",
+        "name": "gameLoopRateChanged",
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Signal"
+                    ]
+                }
+            }
+        ],
+        "memberof": "Stats",
+        "longname": "Stats.gameLoopRateChanged",
+        "scope": "static"
+    },
+    {
+        "description": "Triggered when the value of the <code>avatarCount</code> property changes.",
+        "kind": "function",
+        "name": "avatarCountChanged",
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Signal"
+                    ]
+                }
+            }
+        ],
+        "memberof": "Stats",
+        "longname": "Stats.avatarCountChanged",
+        "scope": "static"
+    },
+    {
+        "description": "Triggered when the value of the <code>updatedAvatarCount</code> property changes.",
+        "kind": "function",
+        "name": "updatedAvatarCountChanged",
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Signal"
+                    ]
+                }
+            }
+        ],
+        "memberof": "Stats",
+        "longname": "Stats.updatedAvatarCountChanged",
+        "scope": "static"
+    },
+    {
+        "description": "Triggered when the value of the <code>notUpdatedAvatarCount</code> property changes.",
+        "kind": "function",
+        "name": "notUpdatedAvatarCountChanged",
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Signal"
+                    ]
+                }
+            }
+        ],
+        "memberof": "Stats",
+        "longname": "Stats.notUpdatedAvatarCountChanged",
+        "scope": "static"
+    },
+    {
+        "description": "Triggered when the value of the <code>packetInCount</code> property changes.",
+        "kind": "function",
+        "name": "packetInCountChanged",
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Signal"
+                    ]
+                }
+            }
+        ],
+        "memberof": "Stats",
+        "longname": "Stats.packetInCountChanged",
+        "scope": "static"
+    },
+    {
+        "description": "Triggered when the value of the <code>packetOutCount</code> property changes.",
+        "kind": "function",
+        "name": "packetOutCountChanged",
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Signal"
+                    ]
+                }
+            }
+        ],
+        "memberof": "Stats",
+        "longname": "Stats.packetOutCountChanged",
+        "scope": "static"
+    },
+    {
+        "description": "Triggered when the value of the <code>mbpsIn</code> property changes.",
+        "kind": "function",
+        "name": "mbpsInChanged",
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Signal"
+                    ]
+                }
+            }
+        ],
+        "memberof": "Stats",
+        "longname": "Stats.mbpsInChanged",
+        "scope": "static"
+    },
+    {
+        "description": "Triggered when the value of the <code>mbpsOut</code> property changes.",
+        "kind": "function",
+        "name": "mbpsOutChanged",
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Signal"
+                    ]
+                }
+            }
+        ],
+        "memberof": "Stats",
+        "longname": "Stats.mbpsOutChanged",
+        "scope": "static"
+    },
+    {
+        "description": "Triggered when the value of the <code>assetMbpsIn</code> property changes.",
+        "kind": "function",
+        "name": "assetMbpsInChanged",
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Signal"
+                    ]
+                }
+            }
+        ],
+        "memberof": "Stats",
+        "longname": "Stats.assetMbpsInChanged",
+        "scope": "static"
+    },
+    {
+        "description": "Triggered when the value of the <code>assetMbpsOut</code> property changes.",
+        "kind": "function",
+        "name": "assetMbpsOutChanged",
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Signal"
+                    ]
+                }
+            }
+        ],
+        "memberof": "Stats",
+        "longname": "Stats.assetMbpsOutChanged",
+        "scope": "static"
+    },
+    {
+        "description": "Triggered when the value of the <code>audioPing</code> property changes.",
+        "kind": "function",
+        "name": "audioPingChanged",
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Signal"
+                    ]
+                }
+            }
+        ],
+        "memberof": "Stats",
+        "longname": "Stats.audioPingChanged",
+        "scope": "static"
+    },
+    {
+        "description": "Triggered when the value of the <code>avatarPing</code> property changes.",
+        "kind": "function",
+        "name": "avatarPingChanged",
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Signal"
+                    ]
+                }
+            }
+        ],
+        "memberof": "Stats",
+        "longname": "Stats.avatarPingChanged",
+        "scope": "static"
+    },
+    {
+        "description": "Triggered when the value of the <code>entitiesPing</code> property changes.",
+        "kind": "function",
+        "name": "entitiesPingChanged",
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Signal"
+                    ]
+                }
+            }
+        ],
+        "memberof": "Stats",
+        "longname": "Stats.entitiesPingChanged",
+        "scope": "static"
+    },
+    {
+        "description": "Triggered when the value of the <code>assetPing</code> property changes.",
+        "kind": "function",
+        "name": "assetPingChanged",
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Signal"
+                    ]
+                }
+            }
+        ],
+        "memberof": "Stats",
+        "longname": "Stats.assetPingChanged",
+        "scope": "static"
+    },
+    {
+        "description": "Triggered when the value of the <code>messagePing</code> property changes.",
+        "kind": "function",
+        "name": "messagePingChanged",
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Signal"
+                    ]
+                }
+            }
+        ],
+        "memberof": "Stats",
+        "longname": "Stats.messagePingChanged",
+        "scope": "static"
+    },
+    {
+        "description": "Triggered when the value of the <code>position</code> property changes.",
+        "kind": "function",
+        "name": "positionChanged",
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Signal"
+                    ]
+                }
+            }
+        ],
+        "memberof": "Stats",
+        "longname": "Stats.positionChanged",
+        "scope": "static"
+    },
+    {
+        "description": "Triggered when the value of the <code>speed</code> property changes.",
+        "kind": "function",
+        "name": "speedChanged",
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Signal"
+                    ]
+                }
+            }
+        ],
+        "memberof": "Stats",
+        "longname": "Stats.speedChanged",
+        "scope": "static"
+    },
+    {
+        "description": "Triggered when the value of the <code>yaw</code> property changes.",
+        "kind": "function",
+        "name": "yawChanged",
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Signal"
+                    ]
+                }
+            }
+        ],
+        "memberof": "Stats",
+        "longname": "Stats.yawChanged",
+        "scope": "static"
+    },
+    {
+        "description": "Triggered when the value of the <code>avatarMixerInKbps</code> property changes.",
+        "kind": "function",
+        "name": "avatarMixerInKbpsChanged",
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Signal"
+                    ]
+                }
+            }
+        ],
+        "memberof": "Stats",
+        "longname": "Stats.avatarMixerInKbpsChanged",
+        "scope": "static"
+    },
+    {
+        "description": "Triggered when the value of the <code>avatarMixerInPps</code> property changes.",
+        "kind": "function",
+        "name": "avatarMixerInPpsChanged",
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Signal"
+                    ]
+                }
+            }
+        ],
+        "memberof": "Stats",
+        "longname": "Stats.avatarMixerInPpsChanged",
+        "scope": "static"
+    },
+    {
+        "description": "Triggered when the value of the <code>avatarMixerOutKbps</code> property changes.",
+        "kind": "function",
+        "name": "avatarMixerOutKbpsChanged",
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Signal"
+                    ]
+                }
+            }
+        ],
+        "memberof": "Stats",
+        "longname": "Stats.avatarMixerOutKbpsChanged",
+        "scope": "static"
+    },
+    {
+        "description": "Triggered when the value of the <code>avatarMixerOutPps</code> property changes.",
+        "kind": "function",
+        "name": "avatarMixerOutPpsChanged",
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Signal"
+                    ]
+                }
+            }
+        ],
+        "memberof": "Stats",
+        "longname": "Stats.avatarMixerOutPpsChanged",
+        "scope": "static"
+    },
+    {
+        "description": "Triggered when the value of the <code>myAvatarSendRate</code> property changes.",
+        "kind": "function",
+        "name": "myAvatarSendRateChanged",
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Signal"
+                    ]
+                }
+            }
+        ],
+        "memberof": "Stats",
+        "longname": "Stats.myAvatarSendRateChanged",
+        "scope": "static"
+    },
+    {
+        "description": "Triggered when the value of the <code>audioMixerInKbps</code> property changes.",
+        "kind": "function",
+        "name": "audioMixerInKbpsChanged",
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Signal"
+                    ]
+                }
+            }
+        ],
+        "memberof": "Stats",
+        "longname": "Stats.audioMixerInKbpsChanged",
+        "scope": "static"
+    },
+    {
+        "description": "Triggered when the value of the <code>audioMixerInPps</code> property changes.",
+        "kind": "function",
+        "name": "audioMixerInPpsChanged",
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Signal"
+                    ]
+                }
+            }
+        ],
+        "memberof": "Stats",
+        "longname": "Stats.audioMixerInPpsChanged",
+        "scope": "static"
+    },
+    {
+        "description": "Triggered when the value of the <code>audioMixerOutKbps</code> property changes.",
+        "kind": "function",
+        "name": "audioMixerOutKbpsChanged",
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Signal"
+                    ]
+                }
+            }
+        ],
+        "memberof": "Stats",
+        "longname": "Stats.audioMixerOutKbpsChanged",
+        "scope": "static"
+    },
+    {
+        "description": "Triggered when the value of the <code>audioMixerOutPps</code> property changes.",
+        "kind": "function",
+        "name": "audioMixerOutPpsChanged",
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Signal"
+                    ]
+                }
+            }
+        ],
+        "memberof": "Stats",
+        "longname": "Stats.audioMixerOutPpsChanged",
+        "scope": "static"
+    },
+    {
+        "description": "Triggered when the value of the <code>audioMixerKbps</code> property changes.",
+        "kind": "function",
+        "name": "audioMixerKbpsChanged",
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Signal"
+                    ]
+                }
+            }
+        ],
+        "memberof": "Stats",
+        "longname": "Stats.audioMixerKbpsChanged",
+        "scope": "static"
+    },
+    {
+        "description": "Triggered when the value of the <code>audioMixerPps</code> property changes.",
+        "kind": "function",
+        "name": "audioMixerPpsChanged",
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Signal"
+                    ]
+                }
+            }
+        ],
+        "memberof": "Stats",
+        "longname": "Stats.audioMixerPpsChanged",
+        "scope": "static"
+    },
+    {
+        "description": "Triggered when the value of the <code>audioOutboundPPS</code> property changes.",
+        "kind": "function",
+        "name": "audioOutboundPPSChanged",
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Signal"
+                    ]
+                }
+            }
+        ],
+        "memberof": "Stats",
+        "longname": "Stats.audioOutboundPPSChanged",
+        "scope": "static"
+    },
+    {
+        "description": "Triggered when the value of the <code>audioSilentOutboundPPS</code> property changes.",
+        "kind": "function",
+        "name": "audioSilentOutboundPPSChanged",
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Signal"
+                    ]
+                }
+            }
+        ],
+        "memberof": "Stats",
+        "longname": "Stats.audioSilentOutboundPPSChanged",
+        "scope": "static"
+    },
+    {
+        "description": "Triggered when the value of the <code>audioAudioInboundPPS</code> property changes.",
+        "kind": "function",
+        "name": "audioAudioInboundPPSChanged",
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Signal"
+                    ]
+                }
+            }
+        ],
+        "memberof": "Stats",
+        "longname": "Stats.audioAudioInboundPPSChanged",
+        "scope": "static"
+    },
+    {
+        "description": "Triggered when the value of the <code>audioSilentInboundPPS</code> property changes.",
+        "kind": "function",
+        "name": "audioSilentInboundPPSChanged",
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Signal"
+                    ]
+                }
+            }
+        ],
+        "memberof": "Stats",
+        "longname": "Stats.audioSilentInboundPPSChanged",
+        "scope": "static"
+    },
+    {
+        "description": "Triggered when the value of the <code>audioPacketLoss</code> property changes.",
+        "kind": "function",
+        "name": "audioPacketLossChanged",
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Signal"
+                    ]
+                }
+            }
+        ],
+        "memberof": "Stats",
+        "longname": "Stats.audioPacketLossChanged",
+        "scope": "static"
+    },
+    {
+        "description": "Triggered when the value of the <code>audioCodec</code> property changes.",
+        "kind": "function",
+        "name": "audioCodecChanged",
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Signal"
+                    ]
+                }
+            }
+        ],
+        "memberof": "Stats",
+        "longname": "Stats.audioCodecChanged",
+        "scope": "static"
+    },
+    {
+        "description": "Triggered when the value of the <code>audioNoiseGate</code> property changes.",
+        "kind": "function",
+        "name": "audioNoiseGateChanged",
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Signal"
+                    ]
+                }
+            }
+        ],
+        "memberof": "Stats",
+        "longname": "Stats.audioNoiseGateChanged",
+        "scope": "static"
+    },
+    {
+        "description": "Triggered when the value of the <code>entityPacketsInKbps</code> property changes.",
+        "kind": "function",
+        "name": "entityPacketsInKbpsChanged",
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Signal"
+                    ]
+                }
+            }
+        ],
+        "memberof": "Stats",
+        "longname": "Stats.entityPacketsInKbpsChanged",
+        "scope": "static"
+    },
+    {
+        "description": "Triggered when the value of the <code>downloads</code> property changes.",
+        "kind": "function",
+        "name": "downloadsChanged",
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Signal"
+                    ]
+                }
+            }
+        ],
+        "memberof": "Stats",
+        "longname": "Stats.downloadsChanged",
+        "scope": "static"
+    },
+    {
+        "description": "Triggered when the value of the <code>downloadLimit</code> property changes.",
+        "kind": "function",
+        "name": "downloadLimitChanged",
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Signal"
+                    ]
+                }
+            }
+        ],
+        "memberof": "Stats",
+        "longname": "Stats.downloadLimitChanged",
+        "scope": "static"
+    },
+    {
+        "description": "Triggered when the value of the <code>downloadsPending</code> property changes.",
+        "kind": "function",
+        "name": "downloadsPendingChanged",
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Signal"
+                    ]
+                }
+            }
+        ],
+        "memberof": "Stats",
+        "longname": "Stats.downloadsPendingChanged",
+        "scope": "static"
+    },
+    {
+        "description": "Triggered when the value of the <code>downloadUrls</code> property changes.",
+        "kind": "function",
+        "name": "downloadUrlsChanged",
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Signal"
+                    ]
+                }
+            }
+        ],
+        "memberof": "Stats",
+        "longname": "Stats.downloadUrlsChanged",
+        "scope": "static"
+    },
+    {
+        "description": "Triggered when the value of the <code>processing</code> property changes.",
+        "kind": "function",
+        "name": "processingChanged",
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Signal"
+                    ]
+                }
+            }
+        ],
+        "memberof": "Stats",
+        "longname": "Stats.processingChanged",
+        "scope": "static"
+    },
+    {
+        "description": "Triggered when the value of the <code>processingPending</code> property changes.",
+        "kind": "function",
+        "name": "processingPendingChanged",
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Signal"
+                    ]
+                }
+            }
+        ],
+        "memberof": "Stats",
+        "longname": "Stats.processingPendingChanged",
+        "scope": "static"
+    },
+    {
+        "description": "Triggered when the value of the <code>triangles</code> property changes.",
+        "kind": "function",
+        "name": "trianglesChanged",
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Signal"
+                    ]
+                }
+            }
+        ],
+        "memberof": "Stats",
+        "longname": "Stats.trianglesChanged",
+        "scope": "static"
+    },
+    {
+        "description": "Triggered when the value of the <code>quads</code> property changes.",
+        "kind": "function",
+        "name": "quadsChanged",
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Signal"
+                    ]
+                }
+            }
+        ],
+        "memberof": "Stats",
+        "longname": "Stats.quadsChanged",
+        "scope": "static"
+    },
+    {
+        "description": "Triggered when the value of the <code>materialSwitches</code> property changes.",
+        "kind": "function",
+        "name": "materialSwitchesChanged",
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Signal"
+                    ]
+                }
+            }
+        ],
+        "memberof": "Stats",
+        "longname": "Stats.materialSwitchesChanged",
+        "scope": "static"
+    },
+    {
+        "description": "Triggered when the value of the <code>itemConsidered</code> property changes.",
+        "kind": "function",
+        "name": "itemConsideredChanged",
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Signal"
+                    ]
+                }
+            }
+        ],
+        "memberof": "Stats",
+        "longname": "Stats.itemConsideredChanged",
+        "scope": "static"
+    },
+    {
+        "description": "Triggered when the value of the <code>itemOutOfView</code> property changes.",
+        "kind": "function",
+        "name": "itemOutOfViewChanged",
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Signal"
+                    ]
+                }
+            }
+        ],
+        "memberof": "Stats",
+        "longname": "Stats.itemOutOfViewChanged",
+        "scope": "static"
+    },
+    {
+        "description": "Triggered when the value of the <code>itemTooSmall</code> property changes.",
+        "kind": "function",
+        "name": "itemTooSmallChanged",
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Signal"
+                    ]
+                }
+            }
+        ],
+        "memberof": "Stats",
+        "longname": "Stats.itemTooSmallChanged",
+        "scope": "static"
+    },
+    {
+        "description": "Triggered when the value of the <code>itemRendered</code> property changes.",
+        "kind": "function",
+        "name": "itemRenderedChanged",
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Signal"
+                    ]
+                }
+            }
+        ],
+        "memberof": "Stats",
+        "longname": "Stats.itemRenderedChanged",
+        "scope": "static"
+    },
+    {
+        "description": "Triggered when the value of the <code>shadowConsidered</code> property changes.",
+        "kind": "function",
+        "name": "shadowConsideredChanged",
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Signal"
+                    ]
+                }
+            }
+        ],
+        "memberof": "Stats",
+        "longname": "Stats.shadowConsideredChanged",
+        "scope": "static"
+    },
+    {
+        "description": "Triggered when the value of the <code>shadowOutOfView</code> property changes.",
+        "kind": "function",
+        "name": "shadowOutOfViewChanged",
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Signal"
+                    ]
+                }
+            }
+        ],
+        "memberof": "Stats",
+        "longname": "Stats.shadowOutOfViewChanged",
+        "scope": "static"
+    },
+    {
+        "description": "Triggered when the value of the <code>shadowTooSmall</code> property changes.",
+        "kind": "function",
+        "name": "shadowTooSmallChanged",
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Signal"
+                    ]
+                }
+            }
+        ],
+        "memberof": "Stats",
+        "longname": "Stats.shadowTooSmallChanged",
+        "scope": "static"
+    },
+    {
+        "description": "Triggered when the value of the <code>shadowRendered</code> property changes.",
+        "kind": "function",
+        "name": "shadowRenderedChanged",
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Signal"
+                    ]
+                }
+            }
+        ],
+        "memberof": "Stats",
+        "longname": "Stats.shadowRenderedChanged",
+        "scope": "static"
+    },
+    {
+        "description": "Triggered when the value of the <code>sendingMode</code> property changes.",
+        "kind": "function",
+        "name": "sendingModeChanged",
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Signal"
+                    ]
+                }
+            }
+        ],
+        "memberof": "Stats",
+        "longname": "Stats.sendingModeChanged",
+        "scope": "static"
+    },
+    {
+        "description": "Triggered when the value of the <code>packetStats</code> property changes.",
+        "kind": "function",
+        "name": "packetStatsChanged",
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Signal"
+                    ]
+                }
+            }
+        ],
+        "memberof": "Stats",
+        "longname": "Stats.packetStatsChanged",
+        "scope": "static"
+    },
+    {
+        "description": "Triggered when the value of the <code>lodStatus</code> property changes.",
+        "kind": "function",
+        "name": "lodStatusChanged",
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Signal"
+                    ]
+                }
+            }
+        ],
+        "memberof": "Stats",
+        "longname": "Stats.lodStatusChanged",
+        "scope": "static"
+    },
+    {
+        "description": "Triggered when the value of the <code>serverElements</code> property changes.",
+        "kind": "function",
+        "name": "serverElementsChanged",
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Signal"
+                    ]
+                }
+            }
+        ],
+        "memberof": "Stats",
+        "longname": "Stats.serverElementsChanged",
+        "scope": "static"
+    },
+    {
+        "description": "Triggered when the value of the <code>serverInternal</code> property changes.",
+        "kind": "function",
+        "name": "serverInternalChanged",
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Signal"
+                    ]
+                }
+            }
+        ],
+        "memberof": "Stats",
+        "longname": "Stats.serverInternalChanged",
+        "scope": "static"
+    },
+    {
+        "description": "Triggered when the value of the <code>serverLeaves</code> property changes.",
+        "kind": "function",
+        "name": "serverLeavesChanged",
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Signal"
+                    ]
+                }
+            }
+        ],
+        "memberof": "Stats",
+        "longname": "Stats.serverLeavesChanged",
+        "scope": "static"
+    },
+    {
+        "description": "Triggered when the value of the <code>localElements</code> property changes.",
+        "kind": "function",
+        "name": "localElementsChanged",
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Signal"
+                    ]
+                }
+            }
+        ],
+        "memberof": "Stats",
+        "longname": "Stats.localElementsChanged",
+        "scope": "static"
+    },
+    {
+        "description": "Triggered when the value of the <code>localInternal</code> property changes.",
+        "kind": "function",
+        "name": "localInternalChanged",
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Signal"
+                    ]
+                }
+            }
+        ],
+        "memberof": "Stats",
+        "longname": "Stats.localInternalChanged",
+        "scope": "static"
+    },
+    {
+        "description": "Triggered when the value of the <code>localLeaves</code> property changes.",
+        "kind": "function",
+        "name": "localLeavesChanged",
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Signal"
+                    ]
+                }
+            }
+        ],
+        "memberof": "Stats",
+        "longname": "Stats.localLeavesChanged",
+        "scope": "static"
+    },
+    {
+        "description": "Triggered when the value of the <code>timingStats</code> property changes.",
+        "kind": "function",
+        "name": "timingStatsChanged",
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Signal"
+                    ]
+                }
+            }
+        ],
+        "memberof": "Stats",
+        "longname": "Stats.timingStatsChanged",
+        "scope": "static"
+    },
+    {
+        "description": "Triggered when the value of the <code>gameUpdateStats</code> property changes.",
+        "kind": "function",
+        "name": "gameUpdateStatsChanged",
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Signal"
+                    ]
+                }
+            }
+        ],
+        "memberof": "Stats",
+        "longname": "Stats.gameUpdateStatsChanged",
+        "scope": "static"
+    },
+    {
+        "description": "Triggered when the value of the <code>glContextSwapchainMemory</code> property changes.",
+        "kind": "function",
+        "name": "glContextSwapchainMemoryChanged",
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Signal"
+                    ]
+                }
+            }
+        ],
+        "memberof": "Stats",
+        "longname": "Stats.glContextSwapchainMemoryChanged",
+        "scope": "static"
+    },
+    {
+        "description": "Triggered when the value of the <code>qmlTextureMemory</code> property changes.",
+        "kind": "function",
+        "name": "qmlTextureMemoryChanged",
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Signal"
+                    ]
+                }
+            }
+        ],
+        "memberof": "Stats",
+        "longname": "Stats.qmlTextureMemoryChanged",
+        "scope": "static"
+    },
+    {
+        "description": "Triggered when the value of the <code>texturePendingTransfers</code> property changes.",
+        "kind": "function",
+        "name": "texturePendingTransfersChanged",
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Signal"
+                    ]
+                }
+            }
+        ],
+        "memberof": "Stats",
+        "longname": "Stats.texturePendingTransfersChanged",
+        "scope": "static"
+    },
+    {
+        "description": "Triggered when the value of the <code>gpuBuffers</code> property changes.",
+        "kind": "function",
+        "name": "gpuBuffersChanged",
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Signal"
+                    ]
+                }
+            }
+        ],
+        "memberof": "Stats",
+        "longname": "Stats.gpuBuffersChanged",
+        "scope": "static"
+    },
+    {
+        "description": "Triggered when the value of the <code>gpuBufferMemory</code> property changes.",
+        "kind": "function",
+        "name": "gpuBufferMemoryChanged",
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Signal"
+                    ]
+                }
+            }
+        ],
+        "memberof": "Stats",
+        "longname": "Stats.gpuBufferMemoryChanged",
+        "scope": "static"
+    },
+    {
+        "description": "Triggered when the value of the <code>gpuTextures</code> property changes.",
+        "kind": "function",
+        "name": "gpuTexturesChanged",
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Signal"
+                    ]
+                }
+            }
+        ],
+        "memberof": "Stats",
+        "longname": "Stats.gpuTexturesChanged",
+        "scope": "static"
+    },
+    {
+        "description": "Triggered when the value of the <code>gpuTextureMemory</code> property changes.",
+        "kind": "function",
+        "name": "gpuTextureMemoryChanged",
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Signal"
+                    ]
+                }
+            }
+        ],
+        "memberof": "Stats",
+        "longname": "Stats.gpuTextureMemoryChanged",
+        "scope": "static"
+    },
+    {
+        "description": "Triggered when the value of the <code>gpuTextureResidentMemory</code> property changes.",
+        "kind": "function",
+        "name": "gpuTextureResidentMemoryChanged",
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Signal"
+                    ]
+                }
+            }
+        ],
+        "memberof": "Stats",
+        "longname": "Stats.gpuTextureResidentMemoryChanged",
+        "scope": "static"
+    },
+    {
+        "description": "Triggered when the value of the <code>gpuTextureFramebufferMemory</code> property changes.",
+        "kind": "function",
+        "name": "gpuTextureFramebufferMemoryChanged",
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Signal"
+                    ]
+                }
+            }
+        ],
+        "memberof": "Stats",
+        "longname": "Stats.gpuTextureFramebufferMemoryChanged",
+        "scope": "static"
+    },
+    {
+        "description": "Triggered when the value of the <code>gpuTextureResourceMemory</code> property changes.",
+        "kind": "function",
+        "name": "gpuTextureResourceMemoryChanged",
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Signal"
+                    ]
+                }
+            }
+        ],
+        "memberof": "Stats",
+        "longname": "Stats.gpuTextureResourceMemoryChanged",
+        "scope": "static"
+    },
+    {
+        "description": "Triggered when the value of the <code>gpuTextureResourcePopulatedMemory</code> property changes.",
+        "kind": "function",
+        "name": "gpuTextureResourcePopulatedMemoryChanged",
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Signal"
+                    ]
+                }
+            }
+        ],
+        "memberof": "Stats",
+        "longname": "Stats.gpuTextureResourcePopulatedMemoryChanged",
+        "scope": "static"
+    },
+    {
+        "description": "Triggered when the value of the <code>gpuTextureExternalMemory</code> property changes.",
+        "kind": "function",
+        "name": "gpuTextureExternalMemoryChanged",
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Signal"
+                    ]
+                }
+            }
+        ],
+        "memberof": "Stats",
+        "longname": "Stats.gpuTextureExternalMemoryChanged",
+        "scope": "static"
+    },
+    {
+        "description": "Triggered when the value of the <code>gpuTextureMemoryPressureState</code> property changes.",
+        "kind": "function",
+        "name": "gpuTextureMemoryPressureStateChanged",
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Signal"
+                    ]
+                }
+            }
+        ],
+        "memberof": "Stats",
+        "longname": "Stats.gpuTextureMemoryPressureStateChanged",
+        "scope": "static"
+    },
+    {
+        "description": "Triggered when the value of the <code>gpuFreeMemory</code> property changes.",
+        "kind": "function",
+        "name": "gpuFreeMemoryChanged",
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Signal"
+                    ]
+                }
+            }
+        ],
+        "memberof": "Stats",
+        "longname": "Stats.gpuFreeMemoryChanged",
+        "scope": "static"
+    },
+    {
+        "description": "Triggered when the value of the <code>gpuFrameTime</code> property changes.",
+        "kind": "function",
+        "name": "gpuFrameTimeChanged",
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Signal"
+                    ]
+                }
+            }
+        ],
+        "memberof": "Stats",
+        "longname": "Stats.gpuFrameTimeChanged",
+        "scope": "static"
+    },
+    {
+        "description": "Triggered when the value of the <code>batchFrameTime</code> property changes.",
+        "kind": "function",
+        "name": "batchFrameTimeChanged",
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Signal"
+                    ]
+                }
+            }
+        ],
+        "memberof": "Stats",
+        "longname": "Stats.batchFrameTimeChanged",
+        "scope": "static"
+    },
+    {
+        "description": "Triggered when the value of the <code>engineFrameTime</code> property changes.",
+        "kind": "function",
+        "name": "engineFrameTimeChanged",
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Signal"
+                    ]
+                }
+            }
+        ],
+        "memberof": "Stats",
+        "longname": "Stats.engineFrameTimeChanged",
+        "scope": "static"
+    },
+    {
+        "description": "Triggered when the value of the <code>avatarSimulationTime</code> property changes.",
+        "kind": "function",
+        "name": "avatarSimulationTimeChanged",
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Signal"
+                    ]
+                }
+            }
+        ],
+        "memberof": "Stats",
+        "longname": "Stats.avatarSimulationTimeChanged",
+        "scope": "static"
+    },
+    {
+        "description": "Triggered when the value of the <code>rectifiedTextureCount</code> property changes.",
+        "kind": "function",
+        "name": "rectifiedTextureCountChanged",
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Signal"
+                    ]
+                }
+            }
+        ],
+        "memberof": "Stats",
+        "longname": "Stats.rectifiedTextureCountChanged",
+        "scope": "static"
+    },
+    {
+        "description": "Triggered when the value of the <code>decimatedTextureCount</code> property changes.",
+        "kind": "function",
+        "name": "decimatedTextureCountChanged",
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Signal"
+                    ]
+                }
+            }
+        ],
+        "memberof": "Stats",
+        "longname": "Stats.decimatedTextureCountChanged",
+        "scope": "static"
+    },
+    {
+        "description": "Triggered when the value of the <code>TODO</code> property changes.",
+        "kind": "function",
+        "name": "TODO",
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "Rect"
+                    ]
+                },
+                "name": "childrenRect"
+            }
+        ],
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Signal"
+                    ]
+                }
+            }
+        ],
+        "memberof": "Stats",
+        "longname": "Stats.TODO",
+        "scope": "static"
+    },
+    {
+        "description": "Triggered when the value of the <code>TODO</code> property changes.",
+        "kind": "function",
+        "name": "TODO",
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ]
+                },
+                "name": "baselineOffset"
+            }
+        ],
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Signal"
+                    ]
+                }
+            }
+        ],
+        "memberof": "Stats",
+        "longname": "Stats.TODO",
+        "scope": "static"
+    },
+    {
+        "description": "Triggered when the value of the <code>TODO</code> property changes.",
+        "kind": "function",
+        "name": "TODO",
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "string"
+                    ]
+                },
+                "name": "state"
+            }
+        ],
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Signal"
+                    ]
+                }
+            }
+        ],
+        "memberof": "Stats",
+        "longname": "Stats.TODO",
+        "scope": "static"
+    },
+    {
+        "description": "Triggered when the value of the <code>TODO</code> property changes.",
+        "kind": "function",
+        "name": "TODO",
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "boolean"
+                    ]
+                },
+                "name": "focus"
+            }
+        ],
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Signal"
+                    ]
+                }
+            }
+        ],
+        "memberof": "Stats",
+        "longname": "Stats.TODO",
+        "scope": "static"
+    },
+    {
+        "description": "Triggered when the value of the <code>TODO</code> property changes.",
+        "kind": "function",
+        "name": "TODO",
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "boolean"
+                    ]
+                },
+                "name": "activeFocus"
+            }
+        ],
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Signal"
+                    ]
+                }
+            }
+        ],
+        "memberof": "Stats",
+        "longname": "Stats.TODO",
+        "scope": "static"
+    },
+    {
+        "description": "Triggered when the value of the <code>TODO</code> property changes.",
+        "kind": "function",
+        "name": "TODO",
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "boolean"
+                    ]
+                },
+                "name": "activeFocusOnTab"
+            }
+        ],
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Signal"
+                    ]
+                }
+            }
+        ],
+        "memberof": "Stats",
+        "longname": "Stats.TODO",
+        "scope": "static"
+    },
+    {
+        "description": "Triggered when the value of the <code>TODO</code> property changes.",
+        "kind": "function",
+        "name": "TODO",
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "object"
+                    ]
+                },
+                "name": "parent"
+            }
+        ],
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Signal"
+                    ]
+                }
+            }
+        ],
+        "memberof": "Stats",
+        "longname": "Stats.TODO",
+        "scope": "static"
+    },
+    {
+        "description": "Triggered when the value of the <code>TODO</code> property changes.",
+        "kind": "function",
+        "name": "TODO",
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ]
+                },
+                "name": "transformOrigin"
+            }
+        ],
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Signal"
+                    ]
+                }
+            }
+        ],
+        "memberof": "Stats",
+        "longname": "Stats.TODO",
+        "scope": "static"
+    },
+    {
+        "description": "Triggered when the value of the <code>TODO</code> property changes.",
+        "kind": "function",
+        "name": "TODO",
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "boolean"
+                    ]
+                },
+                "name": "smooth"
+            }
+        ],
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Signal"
+                    ]
+                }
+            }
+        ],
+        "memberof": "Stats",
+        "longname": "Stats.TODO",
+        "scope": "static"
+    },
+    {
+        "description": "Triggered when the value of the <code>TODO</code> property changes.",
+        "kind": "function",
+        "name": "TODO",
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "boolean"
+                    ]
+                },
+                "name": "antialiasing"
+            }
+        ],
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Signal"
+                    ]
+                }
+            }
+        ],
+        "memberof": "Stats",
+        "longname": "Stats.TODO",
+        "scope": "static"
+    },
+    {
+        "description": "Triggered when the value of the <code>TODO</code> property changes.",
+        "kind": "function",
+        "name": "TODO",
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "boolean"
+                    ]
+                },
+                "name": "clip"
+            }
+        ],
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Signal"
+                    ]
+                }
+            }
+        ],
+        "memberof": "Stats",
+        "longname": "Stats.TODO",
+        "scope": "static"
+    },
+    {
+        "description": "Triggered when the value of the <code>TODO</code> property changes.",
+        "kind": "function",
+        "name": "TODO",
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "object"
+                    ]
+                },
+                "name": "window"
+            }
+        ],
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Signal"
+                    ]
+                }
+            }
+        ],
+        "memberof": "Stats",
+        "longname": "Stats.TODO",
+        "scope": "static"
+    },
+    {
+        "description": "Triggered when the value of the <code>TODO</code> property changes.",
+        "kind": "function",
+        "name": "TODO",
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Signal"
+                    ]
+                }
+            }
+        ],
+        "memberof": "Stats",
+        "longname": "Stats.TODO",
+        "scope": "static"
+    },
+    {
+        "description": "Triggered when the value of the <code>TODO</code> property changes.",
+        "kind": "function",
+        "name": "TODO",
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Signal"
+                    ]
+                }
+            }
+        ],
+        "memberof": "Stats",
+        "longname": "Stats.TODO",
+        "scope": "static"
+    },
+    {
+        "description": "Triggered when the value of the <code>TODO</code> property changes.",
+        "kind": "function",
+        "name": "TODO",
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Signal"
+                    ]
+                }
+            }
+        ],
+        "memberof": "Stats",
+        "longname": "Stats.TODO",
+        "scope": "static"
+    },
+    {
+        "description": "Triggered when the value of the <code>TODO</code> property changes.",
+        "kind": "function",
+        "name": "TODO",
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Signal"
+                    ]
+                }
+            }
+        ],
+        "memberof": "Stats",
+        "longname": "Stats.TODO",
+        "scope": "static"
+    },
+    {
+        "description": "Triggered when the value of the <code>TODO</code> property changes.",
+        "kind": "function",
+        "name": "TODO",
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Signal"
+                    ]
+                }
+            }
+        ],
+        "memberof": "Stats",
+        "longname": "Stats.TODO",
+        "scope": "static"
+    },
+    {
+        "description": "Triggered when the value of the <code>TODO</code> property changes.",
+        "kind": "function",
+        "name": "TODO",
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Signal"
+                    ]
+                }
+            }
+        ],
+        "memberof": "Stats",
+        "longname": "Stats.TODO",
+        "scope": "static"
+    },
+    {
+        "description": "Triggered when the value of the <code>TODO</code> property changes.",
+        "kind": "function",
+        "name": "TODO",
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Signal"
+                    ]
+                }
+            }
+        ],
+        "memberof": "Stats",
+        "longname": "Stats.TODO",
+        "scope": "static"
+    },
+    {
+        "description": "Triggered when the value of the <code>TODO</code> property changes.",
+        "kind": "function",
+        "name": "TODO",
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Signal"
+                    ]
+                }
+            }
+        ],
+        "memberof": "Stats",
+        "longname": "Stats.TODO",
+        "scope": "static"
+    },
+    {
+        "description": "Triggered when the value of the <code>TODO</code> property changes.",
+        "kind": "function",
+        "name": "TODO",
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Signal"
+                    ]
+                }
+            }
+        ],
+        "memberof": "Stats",
+        "longname": "Stats.TODO",
+        "scope": "static"
+    },
+    {
+        "description": "Triggered when the value of the <code>TODO</code> property changes.",
+        "kind": "function",
+        "name": "TODO",
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Signal"
+                    ]
+                }
+            }
+        ],
+        "memberof": "Stats",
+        "longname": "Stats.TODO",
+        "scope": "static"
+    },
+    {
+        "description": "Triggered when the value of the <code>TODO</code> property changes.",
+        "kind": "function",
+        "name": "TODO",
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Signal"
+                    ]
+                }
+            }
+        ],
+        "memberof": "Stats",
+        "longname": "Stats.TODO",
+        "scope": "static"
+    },
+    {
+        "description": "Triggered when the value of the <code>TODO</code> property changes.",
+        "kind": "function",
+        "name": "TODO",
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Signal"
+                    ]
+                }
+            }
+        ],
+        "memberof": "Stats",
+        "longname": "Stats.TODO",
+        "scope": "static"
+    },
+    {
+        "description": "Triggered when the value of the <code>TODO</code> property changes.",
+        "kind": "function",
+        "name": "TODO",
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Signal"
+                    ]
+                }
+            }
+        ],
+        "memberof": "Stats",
+        "longname": "Stats.TODO",
+        "scope": "static"
+    },
+    {
+        "description": "Triggered when the value of the <code>TODO</code> property changes.",
+        "kind": "function",
+        "name": "TODO",
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Signal"
+                    ]
+                }
+            }
+        ],
+        "memberof": "Stats",
+        "longname": "Stats.TODO",
+        "scope": "static"
+    },
+    {
+        "kind": "function",
+        "name": "grabToImage",
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "object"
+                    ]
+                },
+                "name": "callback"
+            },
+            {
+                "type": {
+                    "names": [
+                        "Size"
+                    ]
+                },
+                "optional": true,
+                "defaultvalue": "0,0",
+                "name": "targetSize"
+            }
+        ],
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "boolean"
+                    ]
+                }
+            }
+        ],
+        "memberof": "Stats",
+        "longname": "Stats.grabToImage",
+        "scope": "static"
+    },
+    {
+        "kind": "function",
+        "name": "contains",
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "Vec2"
+                    ]
+                },
+                "name": "point"
+            }
+        ],
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "boolean"
+                    ]
+                }
+            }
+        ],
+        "memberof": "Stats",
+        "longname": "Stats.contains",
+        "scope": "static"
+    },
+    {
+        "kind": "function",
+        "name": "mapFromItem",
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "object"
+                    ]
+                },
+                "name": "item"
+            }
+        ],
+        "memberof": "Stats",
+        "longname": "Stats.mapFromItem",
+        "scope": "static"
+    },
+    {
+        "kind": "function",
+        "name": "mapToItem",
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "object"
+                    ]
+                },
+                "name": "item"
+            }
+        ],
+        "memberof": "Stats",
+        "longname": "Stats.mapToItem",
+        "scope": "static"
+    },
+    {
+        "kind": "function",
+        "name": "mapFromGlobal",
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "object"
+                    ]
+                },
+                "name": "global"
+            }
+        ],
+        "memberof": "Stats",
+        "longname": "Stats.mapFromGlobal",
+        "scope": "static"
+    },
+    {
+        "kind": "function",
+        "name": "mapToGlobal",
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "object"
+                    ]
+                },
+                "name": "global"
+            }
+        ],
+        "memberof": "Stats",
+        "longname": "Stats.mapToGlobal",
+        "scope": "static"
+    },
+    {
+        "kind": "function",
+        "name": "forceActiveFocus",
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ]
+                },
+                "optional": true,
+                "defaultvalue": 7,
+                "name": "reason"
+            }
+        ],
+        "memberof": "Stats",
+        "longname": "Stats.forceActiveFocus",
+        "scope": "static"
+    },
+    {
+        "kind": "function",
+        "name": "nextItemInFocusChain",
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "boolean"
+                    ]
+                },
+                "optional": true,
+                "defaultvalue": true,
+                "name": "forward"
+            }
+        ],
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "object"
+                    ]
+                }
+            }
+        ],
+        "memberof": "Stats",
+        "longname": "Stats.nextItemInFocusChain",
+        "scope": "static"
+    },
+    {
+        "kind": "function",
+        "name": "childAt",
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ]
+                },
+                "name": "x"
+            },
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ]
+                },
+                "name": "y"
+            }
+        ],
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "object"
+                    ]
+                }
+            }
+        ],
+        "memberof": "Stats",
+        "longname": "Stats.childAt",
+        "scope": "static"
+    },
+    {
         "description": "The AccountServices API contains helper functions related to user connectivity<br><br><table><tr><th>Available in:</th><td>Interface Scripts</td><td>Client Entity Scripts</td></tr></table>",
         "hifiInterface": true,
         "hifiClientEntity": true,
@@ -4853,6 +8795,11 @@
         "name": "setReverbOptions",
         "params": [
             {
+                "type": {
+                    "names": [
+                        "AudioEffectOptions"
+                    ]
+                },
                 "name": "options"
             }
         ],
@@ -7888,6 +11835,149 @@
         ],
         "memberof": "Settings",
         "longname": "Settings.setValue",
+        "scope": "static"
+    },
+    {
+        "kind": "namespace",
+        "name": "Wallet",
+        "hifiInterface": true,
+        "hifiClientEntity": true,
+        "properties": [
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ]
+                },
+                "name": "walletStatus"
+            }
+        ],
+        "longname": "Wallet",
+        "scope": "global",
+        "description": "<br><br><table><tr><th>Available in:</th><td>Interface Scripts</td><td>Client Entity Scripts</td></tr></table>"
+    },
+    {
+        "kind": "function",
+        "name": "refreshWalletStatus",
+        "memberof": "Wallet",
+        "longname": "Wallet.refreshWalletStatus",
+        "scope": "static"
+    },
+    {
+        "kind": "function",
+        "name": "getWalletStatus",
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ]
+                }
+            }
+        ],
+        "memberof": "Wallet",
+        "longname": "Wallet.getWalletStatus",
+        "scope": "static"
+    },
+    {
+        "kind": "function",
+        "name": "proveAvatarEntityOwnershipVerification",
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "Uuid"
+                    ]
+                },
+                "name": "entityID"
+            }
+        ],
+        "memberof": "Wallet",
+        "longname": "Wallet.proveAvatarEntityOwnershipVerification",
+        "scope": "static"
+    },
+    {
+        "kind": "function",
+        "name": "walletStatusChanged",
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Signal"
+                    ]
+                }
+            }
+        ],
+        "memberof": "Wallet",
+        "longname": "Wallet.walletStatusChanged",
+        "scope": "static"
+    },
+    {
+        "kind": "function",
+        "name": "walletNotSetup",
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Signal"
+                    ]
+                }
+            }
+        ],
+        "memberof": "Wallet",
+        "longname": "Wallet.walletNotSetup",
+        "scope": "static"
+    },
+    {
+        "kind": "function",
+        "name": "ownershipVerificationSuccess",
+        "properties": [
+            {
+                "type": {
+                    "names": [
+                        "Uuid"
+                    ]
+                },
+                "name": "entityID"
+            }
+        ],
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Signal"
+                    ]
+                }
+            }
+        ],
+        "memberof": "Wallet",
+        "longname": "Wallet.ownershipVerificationSuccess",
+        "scope": "static"
+    },
+    {
+        "kind": "function",
+        "name": "ownershipVerificationFailed",
+        "properties": [
+            {
+                "type": {
+                    "names": [
+                        "Uuid"
+                    ]
+                },
+                "name": "entityID"
+            }
+        ],
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Signal"
+                    ]
+                }
+            }
+        ],
+        "memberof": "Wallet",
+        "longname": "Wallet.ownershipVerificationFailed",
         "scope": "static"
     },
     {
@@ -17054,6 +21144,199 @@
         "memberof": "AudioStats",
         "longname": "AudioStats.injectorStreamsChanged",
         "scope": "static"
+    },
+    {
+        "kind": "class",
+        "name": "AudioEffectOptions",
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "object"
+                    ]
+                },
+                "optional": true,
+                "defaultvalue": null,
+                "name": "properties"
+            }
+        ],
+        "hifiInterface": true,
+        "hifiClientEntity": true,
+        "hifiServerEntity": true,
+        "hifiAssignmentClient": true,
+        "properties": [
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ]
+                },
+                "name": "bandwidth"
+            },
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ]
+                },
+                "name": "preDelay"
+            },
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ]
+                },
+                "name": "lateDelay"
+            },
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ]
+                },
+                "name": "reverbTime"
+            },
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ]
+                },
+                "name": "earlyDiffusion"
+            },
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ]
+                },
+                "name": "lateDiffusion"
+            },
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ]
+                },
+                "name": "roomSize"
+            },
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ]
+                },
+                "name": "density"
+            },
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ]
+                },
+                "name": "bassMult"
+            },
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ]
+                },
+                "name": "bassFreq"
+            },
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ]
+                },
+                "name": "highGain"
+            },
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ]
+                },
+                "name": "highFreq"
+            },
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ]
+                },
+                "name": "modRate"
+            },
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ]
+                },
+                "name": "modDepth"
+            },
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ]
+                },
+                "name": "earlyGain"
+            },
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ]
+                },
+                "name": "lateGain"
+            },
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ]
+                },
+                "name": "earlyMixLeft"
+            },
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ]
+                },
+                "name": "earlyMixRight"
+            },
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ]
+                },
+                "name": "lateMixLeft"
+            },
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ]
+                },
+                "name": "lateMixRight"
+            },
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ]
+                },
+                "name": "wetDryMix"
+            }
+        ],
+        "longname": "AudioEffectOptions",
+        "scope": "global",
+        "description": "<br><br><table><tr><th>Available in:</th><td>Interface Scripts</td><td>Client Entity Scripts</td><td>Server Entity Scripts</td><td>Assignment Client Scripts</td></tr></table>"
     },
     {
         "description": "API to manage sound cache resources.<br><br><table><tr><th>Available in:</th><td>Interface Scripts</td><td>Client Entity Scripts</td><td>Server Entity Scripts</td><td>Assignment Client Scripts</td></tr></table>",
@@ -28600,6 +32883,199 @@
         "scope": "static"
     },
     {
+        "description": "<table>\r  <thead>\r    <tr><th>Value</th><th>Description</th></tr>\r  </thead>\r  <tbody>\r    <tr><td><code>0</code></td><td>Points.</td></tr>\r    <tr><td><code>1</code></td><td>Lines.</td></tr>\r    <tr><td><code>2</code></td><td>Line strip.</td></tr>\r    <tr><td><code>3</code></td><td>Triangles.</td></tr>\r    <tr><td><code>4</code></td><td>Triangle strip.</td></tr>\r    <tr><td><code>5</code></td><td>Quads.</td></tr>\r    <tr><td><code>6</code></td><td>Quad strip.</td></tr>\r  </tbody>\r</table>",
+        "kind": "typedef",
+        "name": "Topology",
+        "type": {
+            "names": [
+                "number"
+            ]
+        },
+        "memberof": "Graphics",
+        "longname": "Graphics.Topology",
+        "scope": "static"
+    },
+    {
+        "kind": "typedef",
+        "name": "Material",
+        "type": {
+            "names": [
+                "object"
+            ]
+        },
+        "properties": [
+            {
+                "type": {
+                    "names": [
+                        "string"
+                    ]
+                },
+                "name": "name"
+            },
+            {
+                "type": {
+                    "names": [
+                        "string"
+                    ]
+                },
+                "name": "model"
+            },
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ]
+                },
+                "name": "opacity"
+            },
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ]
+                },
+                "name": "roughness"
+            },
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ]
+                },
+                "name": "metallic"
+            },
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ]
+                },
+                "name": "scattering"
+            },
+            {
+                "type": {
+                    "names": [
+                        "boolean"
+                    ]
+                },
+                "name": "unlit"
+            },
+            {
+                "type": {
+                    "names": [
+                        "string"
+                    ]
+                },
+                "name": "emissiveMap"
+            },
+            {
+                "type": {
+                    "names": [
+                        "string"
+                    ]
+                },
+                "name": "albedoMap"
+            },
+            {
+                "type": {
+                    "names": [
+                        "string"
+                    ]
+                },
+                "name": "opacityMap"
+            },
+            {
+                "type": {
+                    "names": [
+                        "string"
+                    ]
+                },
+                "name": "metallicMap"
+            },
+            {
+                "type": {
+                    "names": [
+                        "string"
+                    ]
+                },
+                "name": "specularMap"
+            },
+            {
+                "type": {
+                    "names": [
+                        "string"
+                    ]
+                },
+                "name": "roughnessMap"
+            },
+            {
+                "type": {
+                    "names": [
+                        "string"
+                    ]
+                },
+                "name": "glossMap"
+            },
+            {
+                "type": {
+                    "names": [
+                        "string"
+                    ]
+                },
+                "name": "normalMap"
+            },
+            {
+                "type": {
+                    "names": [
+                        "string"
+                    ]
+                },
+                "name": "bumpMap"
+            },
+            {
+                "type": {
+                    "names": [
+                        "string"
+                    ]
+                },
+                "name": "occlusionMap"
+            },
+            {
+                "type": {
+                    "names": [
+                        "string"
+                    ]
+                },
+                "name": "lightmapMap"
+            },
+            {
+                "type": {
+                    "names": [
+                        "string"
+                    ]
+                },
+                "name": "scatteringMap"
+            }
+        ],
+        "tags": [
+            {
+                "originalTitle": "propety",
+                "title": "propety",
+                "text": "{Vec3} emissive",
+                "value": "{Vec3} emissive"
+            },
+            {
+                "originalTitle": "propety",
+                "title": "propety",
+                "text": "{Vec3} albedo",
+                "value": "{Vec3} albedo"
+            }
+        ],
+        "memberof": "Graphics",
+        "longname": "Graphics.Material",
+        "scope": "static"
+    },
+    {
         "kind": "typedef",
         "name": "MaterialLayer",
         "type": {
@@ -28611,7 +33087,7 @@
             {
                 "type": {
                     "names": [
-                        "Material"
+                        "Graphics.Material"
                     ]
                 },
                 "description": "This layer's material.",
@@ -28629,6 +33105,92 @@
         ],
         "memberof": "Graphics",
         "longname": "Graphics.MaterialLayer",
+        "scope": "static"
+    },
+    {
+        "kind": "typedef",
+        "name": "IFSData",
+        "type": {
+            "names": [
+                "object"
+            ]
+        },
+        "properties": [
+            {
+                "type": {
+                    "names": [
+                        "string"
+                    ]
+                },
+                "optional": true,
+                "defaultvalue": "\"\"",
+                "description": "mesh name (useful for debugging / debug prints).",
+                "name": "name"
+            },
+            {
+                "type": {
+                    "names": [
+                        "string"
+                    ]
+                },
+                "optional": true,
+                "defaultvalue": "\"\"",
+                "name": "topology"
+            },
+            {
+                "type": {
+                    "names": [
+                        "Array.<number>"
+                    ]
+                },
+                "description": "vertex indices to use for the mesh faces.",
+                "name": "indices"
+            },
+            {
+                "type": {
+                    "names": [
+                        "Array.<Vec3>"
+                    ]
+                },
+                "description": "vertex positions (model space)",
+                "name": "vertices"
+            },
+            {
+                "type": {
+                    "names": [
+                        "Array.<Vec3>"
+                    ]
+                },
+                "optional": true,
+                "defaultvalue": "[]",
+                "description": "vertex normals (normalized)",
+                "name": "normals"
+            },
+            {
+                "type": {
+                    "names": [
+                        "Array.<Vec3>"
+                    ]
+                },
+                "optional": true,
+                "defaultvalue": "[]",
+                "description": "vertex colors (normalized)",
+                "name": "colors"
+            },
+            {
+                "type": {
+                    "names": [
+                        "Array.<Vec2>"
+                    ]
+                },
+                "optional": true,
+                "defaultvalue": "[]",
+                "description": "vertex texture coordinates (normalized)",
+                "name": "texCoords0"
+            }
+        ],
+        "memberof": "Graphics",
+        "longname": "Graphics.IFSData",
         "scope": "static"
     },
     {
@@ -28670,6 +33232,112 @@
         "scope": "static"
     },
     {
+        "kind": "function",
+        "name": "updateModel",
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "Uuid"
+                    ]
+                },
+                "name": "id"
+            },
+            {
+                "type": {
+                    "names": [
+                        "Graphics.Model"
+                    ]
+                },
+                "name": "model"
+            }
+        ],
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "boolean"
+                    ]
+                }
+            }
+        ],
+        "memberof": "Graphics",
+        "longname": "Graphics.updateModel",
+        "scope": "static"
+    },
+    {
+        "kind": "function",
+        "name": "canUpdateModel",
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "Uuid"
+                    ]
+                },
+                "name": "id"
+            },
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ]
+                },
+                "optional": true,
+                "defaultvalue": -1,
+                "name": "meshIndex"
+            },
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ]
+                },
+                "optional": true,
+                "defaultvalue": -1,
+                "name": "partNumber"
+            }
+        ],
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "boolean"
+                    ]
+                }
+            }
+        ],
+        "memberof": "Graphics",
+        "longname": "Graphics.canUpdateModel",
+        "scope": "static"
+    },
+    {
+        "kind": "function",
+        "name": "newModel",
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "Array.<Graphics.Mesh>"
+                    ]
+                },
+                "name": "meshes"
+            }
+        ],
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Graphics.Model"
+                    ]
+                }
+            }
+        ],
+        "memberof": "Graphics",
+        "longname": "Graphics.newModel",
+        "scope": "static"
+    },
+    {
         "description": "Create a new Mesh / Mesh Part with the specified data buffers.",
         "kind": "function",
         "name": "newMesh",
@@ -28699,75 +33367,29 @@
         "scope": "static"
     },
     {
-        "kind": "typedef",
-        "name": "IFSData",
-        "type": {
-            "names": [
-                "object"
-            ]
-        },
-        "properties": [
+        "kind": "function",
+        "name": "exportModelToOBJ",
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "Graphics.Model"
+                    ]
+                },
+                "name": "model"
+            }
+        ],
+        "returns": [
             {
                 "type": {
                     "names": [
                         "string"
                     ]
-                },
-                "optional": true,
-                "description": "mesh name (useful for debugging / debug prints).",
-                "name": "name"
-            },
-            {
-                "type": {
-                    "names": [
-                        "Array.<number>"
-                    ]
-                },
-                "description": "vertex indices to use for the mesh faces.",
-                "name": "indices"
-            },
-            {
-                "type": {
-                    "names": [
-                        "Array.<Vec3>"
-                    ]
-                },
-                "description": "vertex positions (model space)",
-                "name": "vertices"
-            },
-            {
-                "type": {
-                    "names": [
-                        "Array.<Vec3>"
-                    ]
-                },
-                "optional": true,
-                "description": "vertex normals (normalized)",
-                "name": "normals"
-            },
-            {
-                "type": {
-                    "names": [
-                        "Array.<Vec3>"
-                    ]
-                },
-                "optional": true,
-                "description": "vertex colors (normalized)",
-                "name": "colors"
-            },
-            {
-                "type": {
-                    "names": [
-                        "Array.<Vec2>"
-                    ]
-                },
-                "optional": true,
-                "description": "vertex texture coordinates (normalized)",
-                "name": "texCoords0"
+                }
             }
         ],
         "memberof": "Graphics",
-        "longname": "Graphics.IFSData",
+        "longname": "Graphics.exportModelToOBJ",
         "scope": "static"
     },
     {
@@ -28832,6 +33454,38 @@
                 },
                 "description": "Number of currently defined vertex attributes.",
                 "name": "numAttributes"
+            },
+            {
+                "type": {
+                    "names": [
+                        "boolean"
+                    ]
+                },
+                "name": "valid"
+            },
+            {
+                "type": {
+                    "names": [
+                        "boolean"
+                    ]
+                },
+                "name": "strong"
+            },
+            {
+                "type": {
+                    "names": [
+                        "object"
+                    ]
+                },
+                "name": "extents"
+            },
+            {
+                "type": {
+                    "names": [
+                        "object"
+                    ]
+                },
+                "name": "bufferFormats"
             }
         ],
         "memberof": "Graphics",
@@ -28850,11 +33504,43 @@
             {
                 "type": {
                     "names": [
+                        "boolean"
+                    ]
+                },
+                "name": "valid"
+            },
+            {
+                "type": {
+                    "names": [
                         "number"
                     ]
                 },
                 "description": "The part index (within the containing Mesh).",
                 "name": "partIndex"
+            },
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ]
+                },
+                "name": "firstVertexIndex"
+            },
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ]
+                },
+                "name": "baseVertexIndex"
+            },
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ]
+                },
+                "name": "lastVertexIndex"
             },
             {
                 "type": {
@@ -28918,6 +33604,22 @@
                 },
                 "description": "Number of currently defined vertex attributes.",
                 "name": "numAttributes"
+            },
+            {
+                "type": {
+                    "names": [
+                        "object"
+                    ]
+                },
+                "name": "extents"
+            },
+            {
+                "type": {
+                    "names": [
+                        "object"
+                    ]
+                },
+                "name": "bufferFormats"
             }
         ],
         "memberof": "Graphics",
@@ -28992,6 +33694,402 @@
         ],
         "memberof": "Controller",
         "longname": "Controller.Hardware-Keyboard",
+        "scope": "static"
+    },
+    {
+        "kind": "namespace",
+        "name": "Midi",
+        "hifiInterface": true,
+        "hifiClientEntity": true,
+        "longname": "Midi",
+        "scope": "global",
+        "description": "<br><br><table><tr><th>Available in:</th><td>Interface Scripts</td><td>Client Entity Scripts</td></tr></table>"
+    },
+    {
+        "description": "Send Raw MIDI packet to a particular device.",
+        "kind": "function",
+        "name": "sendRawDword",
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ]
+                },
+                "description": "Integer device number.",
+                "name": "device"
+            },
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ]
+                },
+                "description": "Integer (DWORD) raw MIDI message.",
+                "name": "raw"
+            }
+        ],
+        "memberof": "Midi",
+        "longname": "Midi.sendRawDword",
+        "scope": "static"
+    },
+    {
+        "description": "Send MIDI message to a particular device.",
+        "kind": "function",
+        "name": "sendMidiMessage",
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ]
+                },
+                "description": "Integer device number.",
+                "name": "device"
+            },
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ]
+                },
+                "description": "Integer channel number.",
+                "name": "channel"
+            },
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ]
+                },
+                "description": "0x8 is note off, 0x9 is note on (if velocity=0, note off), etc.",
+                "name": "type"
+            },
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ]
+                },
+                "description": "MIDI note number.",
+                "name": "note"
+            },
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ]
+                },
+                "description": "Note velocity (0 means note off).",
+                "name": "velocity"
+            }
+        ],
+        "memberof": "Midi",
+        "longname": "Midi.sendMidiMessage",
+        "scope": "static"
+    },
+    {
+        "description": "Play a note on all connected devices.",
+        "kind": "function",
+        "name": "playMidiNote",
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ]
+                },
+                "description": "0x80 is note off, 0x90 is note on (if velocity=0, note off), etc.",
+                "name": "status"
+            },
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ]
+                },
+                "description": "MIDI note number.",
+                "name": "note"
+            },
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ]
+                },
+                "description": "Note velocity (0 means note off).",
+                "name": "velocity"
+            }
+        ],
+        "memberof": "Midi",
+        "longname": "Midi.playMidiNote",
+        "scope": "static"
+    },
+    {
+        "description": "Turn off all notes on all connected devices.",
+        "kind": "function",
+        "name": "allNotesOff",
+        "memberof": "Midi",
+        "longname": "Midi.allNotesOff",
+        "scope": "static"
+    },
+    {
+        "description": "Clean up and re-discover attached devices.",
+        "kind": "function",
+        "name": "resetDevices",
+        "memberof": "Midi",
+        "longname": "Midi.resetDevices",
+        "scope": "static"
+    },
+    {
+        "description": "Get a list of inputs/outputs.",
+        "kind": "function",
+        "name": "listMidiDevices",
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "boolean"
+                    ]
+                },
+                "name": "output"
+            }
+        ],
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Array.<string>"
+                    ]
+                }
+            }
+        ],
+        "memberof": "Midi",
+        "longname": "Midi.listMidiDevices",
+        "scope": "static"
+    },
+    {
+        "description": "Block an input/output by name.",
+        "kind": "function",
+        "name": "blockMidiDevice",
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "string"
+                    ]
+                },
+                "name": "name"
+            },
+            {
+                "type": {
+                    "names": [
+                        "boolean"
+                    ]
+                },
+                "name": "output"
+            }
+        ],
+        "memberof": "Midi",
+        "longname": "Midi.blockMidiDevice",
+        "scope": "static"
+    },
+    {
+        "description": "Unblock an input/output by name.",
+        "kind": "function",
+        "name": "unblockMidiDevice",
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "string"
+                    ]
+                },
+                "name": "name"
+            },
+            {
+                "type": {
+                    "names": [
+                        "boolean"
+                    ]
+                },
+                "name": "output"
+            }
+        ],
+        "memberof": "Midi",
+        "longname": "Midi.unblockMidiDevice",
+        "scope": "static"
+    },
+    {
+        "description": "Repeat all incoming notes to all outputs (default disabled).",
+        "kind": "function",
+        "name": "thruModeEnable",
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "boolean"
+                    ]
+                },
+                "name": "enable"
+            }
+        ],
+        "memberof": "Midi",
+        "longname": "Midi.thruModeEnable",
+        "scope": "static"
+    },
+    {
+        "description": "Broadcast on all unblocked devices.",
+        "kind": "function",
+        "name": "broadcastEnable",
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "boolean"
+                    ]
+                },
+                "name": "enable"
+            }
+        ],
+        "memberof": "Midi",
+        "longname": "Midi.broadcastEnable",
+        "scope": "static"
+    },
+    {
+        "kind": "function",
+        "name": "typeNoteOffEnable",
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "boolean"
+                    ]
+                },
+                "name": "enable"
+            }
+        ],
+        "memberof": "Midi",
+        "longname": "Midi.typeNoteOffEnable",
+        "scope": "static"
+    },
+    {
+        "kind": "function",
+        "name": "typeNoteOnEnable",
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "boolean"
+                    ]
+                },
+                "name": "enable"
+            }
+        ],
+        "memberof": "Midi",
+        "longname": "Midi.typeNoteOnEnable",
+        "scope": "static"
+    },
+    {
+        "kind": "function",
+        "name": "typePolyKeyPressureEnable",
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "boolean"
+                    ]
+                },
+                "name": "enable"
+            }
+        ],
+        "memberof": "Midi",
+        "longname": "Midi.typePolyKeyPressureEnable",
+        "scope": "static"
+    },
+    {
+        "kind": "function",
+        "name": "typeControlChangeEnable",
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "boolean"
+                    ]
+                },
+                "name": "enable"
+            }
+        ],
+        "memberof": "Midi",
+        "longname": "Midi.typeControlChangeEnable",
+        "scope": "static"
+    },
+    {
+        "kind": "function",
+        "name": "typeProgramChangeEnable",
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "boolean"
+                    ]
+                },
+                "name": "enable"
+            }
+        ],
+        "memberof": "Midi",
+        "longname": "Midi.typeProgramChangeEnable",
+        "scope": "static"
+    },
+    {
+        "kind": "function",
+        "name": "typeChanPressureEnable",
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "boolean"
+                    ]
+                },
+                "name": "enable"
+            }
+        ],
+        "memberof": "Midi",
+        "longname": "Midi.typeChanPressureEnable",
+        "scope": "static"
+    },
+    {
+        "kind": "function",
+        "name": "typePitchBendEnable",
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "boolean"
+                    ]
+                },
+                "name": "enable"
+            }
+        ],
+        "memberof": "Midi",
+        "longname": "Midi.typePitchBendEnable",
+        "scope": "static"
+    },
+    {
+        "kind": "function",
+        "name": "typeSystemMessageEnable",
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "boolean"
+                    ]
+                },
+                "name": "enable"
+            }
+        ],
+        "memberof": "Midi",
+        "longname": "Midi.typeSystemMessageEnable",
         "scope": "static"
     },
     {
@@ -31005,6 +36103,103 @@
         "scope": "static"
     },
     {
+        "kind": "namespace",
+        "name": "Resources",
+        "hifiInterface": true,
+        "hifiClientEntity": true,
+        "hifiServerEntity": true,
+        "hifiAssignmentClient": true,
+        "longname": "Resources",
+        "scope": "global",
+        "description": "<br><br><table><tr><th>Available in:</th><td>Interface Scripts</td><td>Client Entity Scripts</td><td>Server Entity Scripts</td><td>Assignment Client Scripts</td></tr></table>"
+    },
+    {
+        "kind": "function",
+        "name": "overrideUrlPrefix",
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "string"
+                    ]
+                },
+                "name": "prefix"
+            },
+            {
+                "type": {
+                    "names": [
+                        "string"
+                    ]
+                },
+                "name": "replacement"
+            }
+        ],
+        "memberof": "Resources",
+        "longname": "Resources.overrideUrlPrefix",
+        "scope": "static"
+    },
+    {
+        "kind": "function",
+        "name": "restoreUrlPrefix",
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "string"
+                    ]
+                },
+                "name": "prefix"
+            }
+        ],
+        "memberof": "Resources",
+        "longname": "Resources.restoreUrlPrefix",
+        "scope": "static"
+    },
+    {
+        "kind": "function",
+        "name": "stop",
+        "memberof": "Agent",
+        "longname": "Agent.stop",
+        "scope": "static"
+    },
+    {
+        "kind": "function",
+        "name": "sendStatsPacket",
+        "memberof": "Agent",
+        "longname": "Agent.sendStatsPacket",
+        "scope": "static"
+    },
+    {
+        "kind": "function",
+        "name": "clearQueuedCheckIns",
+        "memberof": "Agent",
+        "longname": "Agent.clearQueuedCheckIns",
+        "scope": "static"
+    },
+    {
+        "kind": "function",
+        "name": "finished",
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Signal"
+                    ]
+                }
+            }
+        ],
+        "memberof": "Agent",
+        "longname": "Agent.finished",
+        "scope": "static"
+    },
+    {
+        "kind": "function",
+        "name": "domainSettingsRequestFailed",
+        "memberof": "Agent",
+        "longname": "Agent.domainSettingsRequestFailed",
+        "scope": "static"
+    },
+    {
         "description": "Set the maximum number of entity packets that the client can send per second.",
         "kind": "function",
         "name": "setPacketsPerSecond",
@@ -31884,6 +37079,49 @@
         },
         "memberof": "Entities",
         "longname": "Entities.PhysicsMotionType",
+        "scope": "static"
+    },
+    {
+        "kind": "namespace",
+        "name": "Steam",
+        "hifiInterface": true,
+        "hifiClientEntity": true,
+        "properties": [
+            {
+                "type": {
+                    "names": [
+                        "boolean"
+                    ]
+                },
+                "description": "<em>Read-only.</em>",
+                "name": "running"
+            }
+        ],
+        "longname": "Steam",
+        "scope": "global",
+        "description": "<br><br><table><tr><th>Available in:</th><td>Interface Scripts</td><td>Client Entity Scripts</td></tr></table>"
+    },
+    {
+        "kind": "function",
+        "name": "isRunning",
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "boolean"
+                    ]
+                }
+            }
+        ],
+        "memberof": "Steam",
+        "longname": "Steam.isRunning",
+        "scope": "static"
+    },
+    {
+        "kind": "function",
+        "name": "openInviteOverlay",
+        "memberof": "Steam",
+        "longname": "Steam.openInviteOverlay",
         "scope": "static"
     },
     {
@@ -33037,6 +38275,166 @@
         "scope": "static"
     },
     {
+        "kind": "namespace",
+        "name": "File",
+        "hifiInterface": true,
+        "hifiClientEntity": true,
+        "hifiServerEntity": true,
+        "hifiAssignmentClient": true,
+        "longname": "File",
+        "scope": "global",
+        "description": "<br><br><table><tr><th>Available in:</th><td>Interface Scripts</td><td>Client Entity Scripts</td><td>Server Entity Scripts</td><td>Assignment Client Scripts</td></tr></table>"
+    },
+    {
+        "kind": "function",
+        "name": "convertUrlToPath",
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "string"
+                    ]
+                },
+                "name": "url"
+            }
+        ],
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "string"
+                    ]
+                }
+            }
+        ],
+        "memberof": "File",
+        "longname": "File.convertUrlToPath",
+        "scope": "static"
+    },
+    {
+        "kind": "function",
+        "name": "runUnzip",
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "string"
+                    ]
+                },
+                "name": "path"
+            },
+            {
+                "type": {
+                    "names": [
+                        "string"
+                    ]
+                },
+                "name": "url"
+            },
+            {
+                "type": {
+                    "names": [
+                        "boolean"
+                    ]
+                },
+                "name": "autoAdd"
+            },
+            {
+                "type": {
+                    "names": [
+                        "boolean"
+                    ]
+                },
+                "name": "isZip"
+            },
+            {
+                "type": {
+                    "names": [
+                        "boolean"
+                    ]
+                },
+                "name": "isBlocks"
+            }
+        ],
+        "memberof": "File",
+        "longname": "File.runUnzip",
+        "scope": "static"
+    },
+    {
+        "kind": "function",
+        "name": "getTempDir",
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "string"
+                    ]
+                }
+            }
+        ],
+        "memberof": "File",
+        "longname": "File.getTempDir",
+        "scope": "static"
+    },
+    {
+        "kind": "function",
+        "name": "unzipResult",
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "string"
+                    ]
+                },
+                "name": "zipFile"
+            },
+            {
+                "type": {
+                    "names": [
+                        "string"
+                    ]
+                },
+                "name": "unzipFile"
+            },
+            {
+                "type": {
+                    "names": [
+                        "boolean"
+                    ]
+                },
+                "name": "autoAdd"
+            },
+            {
+                "type": {
+                    "names": [
+                        "boolean"
+                    ]
+                },
+                "name": "isZip"
+            },
+            {
+                "type": {
+                    "names": [
+                        "boolean"
+                    ]
+                },
+                "name": "isBlocks"
+            }
+        ],
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Signal"
+                    ]
+                }
+            }
+        ],
+        "memberof": "File",
+        "longname": "File.unzipResult",
+        "scope": "static"
+    },
+    {
         "description": "A keyboard key event.",
         "kind": "typedef",
         "name": "KeyEvent",
@@ -33124,6 +38522,514 @@
         ],
         "longname": "KeyEvent",
         "scope": "global"
+    },
+    {
+        "kind": "namespace",
+        "name": "Mat4",
+        "hifiInterface": true,
+        "hifiClientEntity": true,
+        "hifiServerEntity": true,
+        "hifiAssignmentClient": true,
+        "longname": "Mat4",
+        "scope": "global",
+        "description": "<br><br><table><tr><th>Available in:</th><td>Interface Scripts</td><td>Client Entity Scripts</td><td>Server Entity Scripts</td><td>Assignment Client Scripts</td></tr></table>"
+    },
+    {
+        "kind": "function",
+        "name": "multiply",
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "Mat4"
+                    ]
+                },
+                "name": "m1"
+            },
+            {
+                "type": {
+                    "names": [
+                        "Mat4"
+                    ]
+                },
+                "name": "m2"
+            }
+        ],
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Mat4"
+                    ]
+                }
+            }
+        ],
+        "memberof": "Mat4",
+        "longname": "Mat4.multiply",
+        "scope": "static"
+    },
+    {
+        "kind": "function",
+        "name": "createFromRotAndTrans",
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "Quat"
+                    ]
+                },
+                "name": "rot"
+            },
+            {
+                "type": {
+                    "names": [
+                        "Vec3"
+                    ]
+                },
+                "name": "trans"
+            }
+        ],
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Mat4"
+                    ]
+                }
+            }
+        ],
+        "memberof": "Mat4",
+        "longname": "Mat4.createFromRotAndTrans",
+        "scope": "static"
+    },
+    {
+        "kind": "function",
+        "name": "createFromScaleRotAndTrans",
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "Vec3"
+                    ]
+                },
+                "name": "scale"
+            },
+            {
+                "type": {
+                    "names": [
+                        "Quat"
+                    ]
+                },
+                "name": "rot"
+            },
+            {
+                "type": {
+                    "names": [
+                        "Vec3"
+                    ]
+                },
+                "name": "trans"
+            }
+        ],
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Mat4"
+                    ]
+                }
+            }
+        ],
+        "memberof": "Mat4",
+        "longname": "Mat4.createFromScaleRotAndTrans",
+        "scope": "static"
+    },
+    {
+        "kind": "function",
+        "name": "createFromColumns",
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "Vec4"
+                    ]
+                },
+                "name": "col0"
+            },
+            {
+                "type": {
+                    "names": [
+                        "Vec4"
+                    ]
+                },
+                "name": "col1"
+            },
+            {
+                "type": {
+                    "names": [
+                        "Vec4"
+                    ]
+                },
+                "name": "col2"
+            },
+            {
+                "type": {
+                    "names": [
+                        "Vec4"
+                    ]
+                },
+                "name": "col"
+            }
+        ],
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Mat4"
+                    ]
+                }
+            }
+        ],
+        "memberof": "Mat4",
+        "longname": "Mat4.createFromColumns",
+        "scope": "static"
+    },
+    {
+        "kind": "function",
+        "name": "createFromArray",
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "Array.<number>"
+                    ]
+                },
+                "name": "numbers"
+            }
+        ],
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Mat4"
+                    ]
+                }
+            }
+        ],
+        "memberof": "Mat4",
+        "longname": "Mat4.createFromArray",
+        "scope": "static"
+    },
+    {
+        "kind": "function",
+        "name": "extractTranslation",
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "Mat4"
+                    ]
+                },
+                "name": "m"
+            }
+        ],
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Vec3"
+                    ]
+                }
+            }
+        ],
+        "memberof": "Mat4",
+        "longname": "Mat4.extractTranslation",
+        "scope": "static"
+    },
+    {
+        "kind": "function",
+        "name": "extractRotation",
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "Mat4"
+                    ]
+                },
+                "name": "m"
+            }
+        ],
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Vec3"
+                    ]
+                }
+            }
+        ],
+        "memberof": "Mat4",
+        "longname": "Mat4.extractRotation",
+        "scope": "static"
+    },
+    {
+        "kind": "function",
+        "name": "extractScale",
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "Mat4"
+                    ]
+                },
+                "name": "m"
+            }
+        ],
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Vec3"
+                    ]
+                }
+            }
+        ],
+        "memberof": "Mat4",
+        "longname": "Mat4.extractScale",
+        "scope": "static"
+    },
+    {
+        "kind": "function",
+        "name": "transformPoint",
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "Mat4"
+                    ]
+                },
+                "name": "m"
+            },
+            {
+                "type": {
+                    "names": [
+                        "Vec3"
+                    ]
+                },
+                "name": "point"
+            }
+        ],
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Vec3"
+                    ]
+                }
+            }
+        ],
+        "memberof": "Mat4",
+        "longname": "Mat4.transformPoint",
+        "scope": "static"
+    },
+    {
+        "kind": "function",
+        "name": "transformVector",
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "Mat4"
+                    ]
+                },
+                "name": "m"
+            },
+            {
+                "type": {
+                    "names": [
+                        "Vec3"
+                    ]
+                },
+                "name": "vector"
+            }
+        ],
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Vec3"
+                    ]
+                }
+            }
+        ],
+        "memberof": "Mat4",
+        "longname": "Mat4.transformVector",
+        "scope": "static"
+    },
+    {
+        "kind": "function",
+        "name": "inverse",
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "Mat4"
+                    ]
+                },
+                "name": "m"
+            }
+        ],
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Mat4"
+                    ]
+                }
+            }
+        ],
+        "memberof": "Mat4",
+        "longname": "Mat4.inverse",
+        "scope": "static"
+    },
+    {
+        "kind": "function",
+        "name": "getFront",
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "Mat4"
+                    ]
+                },
+                "name": "m"
+            }
+        ],
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Vec3"
+                    ]
+                }
+            }
+        ],
+        "memberof": "Mat4",
+        "longname": "Mat4.getFront",
+        "scope": "static"
+    },
+    {
+        "kind": "function",
+        "name": "getForward",
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "Mat4"
+                    ]
+                },
+                "name": "m"
+            }
+        ],
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Vec3"
+                    ]
+                }
+            }
+        ],
+        "memberof": "Mat4",
+        "longname": "Mat4.getForward",
+        "scope": "static"
+    },
+    {
+        "kind": "function",
+        "name": "getRight",
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "Mat4"
+                    ]
+                },
+                "name": "m"
+            }
+        ],
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Vec3"
+                    ]
+                }
+            }
+        ],
+        "memberof": "Mat4",
+        "longname": "Mat4.getRight",
+        "scope": "static"
+    },
+    {
+        "kind": "function",
+        "name": "getUp",
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "Mat4"
+                    ]
+                },
+                "name": "m"
+            }
+        ],
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Vec3"
+                    ]
+                }
+            }
+        ],
+        "memberof": "Mat4",
+        "longname": "Mat4.getUp",
+        "scope": "static"
+    },
+    {
+        "kind": "function",
+        "name": "print",
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "string"
+                    ]
+                },
+                "name": "label"
+            },
+            {
+                "type": {
+                    "names": [
+                        "Mat4"
+                    ]
+                },
+                "name": "m"
+            },
+            {
+                "type": {
+                    "names": [
+                        "boolean"
+                    ]
+                },
+                "optional": true,
+                "defaultvalue": false,
+                "name": "transpose"
+            }
+        ],
+        "memberof": "Mat4",
+        "longname": "Mat4.print",
+        "scope": "static"
     },
     {
         "description": "A set of properties that can be passed to {@link Menu.addMenuItem} to create a new menu item.\r\rIf none of <code>position</code>, <code>beforeItem</code>, <code>afterItem</code>, or <code>grouping</code> are specified, \rthe menu item will be placed at the end of the menu.",
@@ -41133,6 +47039,165 @@
     },
     {
         "kind": "function",
+        "name": "toJSON",
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "string"
+                    ]
+                }
+            }
+        ],
+        "memberof": "Render",
+        "longname": "Render.toJSON",
+        "scope": "static"
+    },
+    {
+        "kind": "function",
+        "name": "load",
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "object"
+                    ]
+                },
+                "name": "map"
+            }
+        ],
+        "memberof": "Render",
+        "longname": "Render.load",
+        "scope": "static"
+    },
+    {
+        "kind": "function",
+        "name": "load",
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "object"
+                    ]
+                },
+                "name": "map"
+            }
+        ],
+        "memberof": "Render",
+        "longname": "Render.load",
+        "scope": "static"
+    },
+    {
+        "kind": "function",
+        "name": "loaded",
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Signal"
+                    ]
+                }
+            }
+        ],
+        "memberof": "Render",
+        "longname": "Render.loaded",
+        "scope": "static"
+    },
+    {
+        "kind": "function",
+        "name": "newStats",
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Signal"
+                    ]
+                }
+            }
+        ],
+        "memberof": "Render",
+        "longname": "Render.newStats",
+        "scope": "static"
+    },
+    {
+        "kind": "function",
+        "name": "dirtyEnabled",
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Signal"
+                    ]
+                }
+            }
+        ],
+        "memberof": "Render",
+        "longname": "Render.dirtyEnabled",
+        "scope": "static"
+    },
+    {
+        "kind": "namespace",
+        "name": "Render",
+        "hifiInterface": true,
+        "hifiClientEntity": true,
+        "properties": [
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ]
+                },
+                "description": "<em>Read-only.</em>",
+                "name": "cpuRunTime"
+            },
+            {
+                "type": {
+                    "names": [
+                        "boolean"
+                    ]
+                },
+                "name": "enabled"
+            }
+        ],
+        "longname": "Render",
+        "scope": "global",
+        "description": "<br><br><table><tr><th>Available in:</th><td>Interface Scripts</td><td>Client Entity Scripts</td></tr></table>"
+    },
+    {
+        "kind": "function",
+        "name": "getConfig",
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "string"
+                    ]
+                },
+                "name": "name"
+            }
+        ],
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "object"
+                    ]
+                }
+            }
+        ],
+        "memberof": "Render",
+        "longname": "Render.getConfig",
+        "scope": "static"
+    },
+    {
+        "kind": "function",
+        "name": "refresh",
+        "memberof": "Render",
+        "longname": "Render.refresh",
+        "scope": "static"
+    },
+    {
+        "kind": "function",
         "name": "muteToggled",
         "returns": [
             {
@@ -41168,6 +47233,718 @@
         ],
         "memberof": "FaceTracker",
         "longname": "FaceTracker.getMuted",
+        "scope": "static"
+    },
+    {
+        "kind": "namespace",
+        "name": "OffscreenFlags",
+        "hifiInterface": true,
+        "hifiClientEntity": true,
+        "properties": [
+            {
+                "type": {
+                    "names": [
+                        "boolean"
+                    ]
+                },
+                "name": "navigationFocused"
+            },
+            {
+                "type": {
+                    "names": [
+                        "boolean"
+                    ]
+                },
+                "name": "navigationFocusDisabled"
+            }
+        ],
+        "longname": "OffscreenFlags",
+        "scope": "global",
+        "description": "<br><br><table><tr><th>Available in:</th><td>Interface Scripts</td><td>Client Entity Scripts</td></tr></table>"
+    },
+    {
+        "kind": "function",
+        "name": "navigationFocusedChanged",
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Signal"
+                    ]
+                }
+            }
+        ],
+        "memberof": "OffscreenFlags",
+        "longname": "OffscreenFlags.navigationFocusedChanged",
+        "scope": "static"
+    },
+    {
+        "kind": "function",
+        "name": "navigationFocusDisabledChanged",
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Signal"
+                    ]
+                }
+            }
+        ],
+        "memberof": "OffscreenFlags",
+        "longname": "OffscreenFlags.navigationFocusDisabledChanged",
+        "scope": "static"
+    },
+    {
+        "description": "Creates a new button, adds it to this and returns it.",
+        "kind": "function",
+        "name": "addButton",
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "Object"
+                    ]
+                },
+                "description": "button properties",
+                "name": "properties"
+            }
+        ],
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "TabletButtonProxy"
+                    ]
+                }
+            }
+        ],
+        "memberof": "QmlFragmentClass",
+        "longname": "QmlFragmentClass#addButton",
+        "scope": "instance"
+    },
+    {
+        "kind": "class",
+        "name": "OverlayWebWindow",
+        "augments": [
+            "OverlayWindow"
+        ],
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "object"
+                    ]
+                },
+                "optional": true,
+                "defaultvalue": null,
+                "name": "properties"
+            }
+        ],
+        "hifiInterface": true,
+        "tags": [
+            {
+                "originalTitle": "hifi-client-en",
+                "title": "hifi-client-en",
+                "text": ""
+            }
+        ],
+        "properties": [
+            {
+                "type": {
+                    "names": [
+                        "string"
+                    ]
+                },
+                "description": "<em>Read-only.</em>",
+                "name": "url"
+            }
+        ],
+        "longname": "OverlayWebWindow",
+        "scope": "global",
+        "description": "<br><br><table><tr><th>Available in:</th><td>Interface Scripts</td></tr></table>"
+    },
+    {
+        "kind": "function",
+        "name": "getURL",
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "string"
+                    ]
+                }
+            }
+        ],
+        "memberof": "OverlayWebWindow",
+        "longname": "OverlayWebWindow.getURL",
+        "scope": "static"
+    },
+    {
+        "kind": "function",
+        "name": "setURL",
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "string"
+                    ]
+                },
+                "name": "url"
+            }
+        ],
+        "memberof": "OverlayWebWindow",
+        "longname": "OverlayWebWindow.setURL",
+        "scope": "static"
+    },
+    {
+        "kind": "function",
+        "name": "getURL",
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "string"
+                    ]
+                },
+                "name": "script"
+            }
+        ],
+        "memberof": "OverlayWebWindow",
+        "longname": "OverlayWebWindow.getURL",
+        "scope": "static"
+    },
+    {
+        "kind": "function",
+        "name": "getURL",
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Signal"
+                    ]
+                }
+            }
+        ],
+        "memberof": "OverlayWebWindow",
+        "longname": "OverlayWebWindow.getURL",
+        "scope": "static"
+    },
+    {
+        "kind": "class",
+        "name": "OverlayWindow",
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "object"
+                    ]
+                },
+                "optional": true,
+                "defaultvalue": null,
+                "name": "properties"
+            }
+        ],
+        "hifiInterface": true,
+        "tags": [
+            {
+                "originalTitle": "hifi-client-en",
+                "title": "hifi-client-en",
+                "text": ""
+            }
+        ],
+        "properties": [
+            {
+                "type": {
+                    "names": [
+                        "Vec2"
+                    ]
+                },
+                "name": "position"
+            },
+            {
+                "type": {
+                    "names": [
+                        "Vec2"
+                    ]
+                },
+                "name": "size"
+            },
+            {
+                "type": {
+                    "names": [
+                        "boolean"
+                    ]
+                },
+                "name": "visible"
+            }
+        ],
+        "longname": "OverlayWindow",
+        "scope": "global",
+        "description": "<br><br><table><tr><th>Available in:</th><td>Interface Scripts</td></tr></table>"
+    },
+    {
+        "kind": "function",
+        "name": "initQml",
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "object"
+                    ]
+                },
+                "name": "properties"
+            }
+        ],
+        "memberof": "OverlayWindow",
+        "longname": "OverlayWindow.initQml",
+        "scope": "static"
+    },
+    {
+        "kind": "function",
+        "name": "isVisible",
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "boolean"
+                    ]
+                }
+            }
+        ],
+        "memberof": "OverlayWindow",
+        "longname": "OverlayWindow.isVisible",
+        "scope": "static"
+    },
+    {
+        "kind": "function",
+        "name": "setVisible",
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "boolean"
+                    ]
+                },
+                "name": "visible"
+            }
+        ],
+        "memberof": "OverlayWindow",
+        "longname": "OverlayWindow.setVisible",
+        "scope": "static"
+    },
+    {
+        "kind": "function",
+        "name": "getPosition",
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Vec2"
+                    ]
+                }
+            }
+        ],
+        "memberof": "OverlayWindow",
+        "longname": "OverlayWindow.getPosition",
+        "scope": "static"
+    },
+    {
+        "kind": "function",
+        "name": "setPosition",
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "Vec2"
+                    ]
+                },
+                "name": "position"
+            }
+        ],
+        "memberof": "OverlayWindow",
+        "longname": "OverlayWindow.setPosition",
+        "scope": "static"
+    },
+    {
+        "kind": "function",
+        "name": "setPosition",
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ]
+                },
+                "name": "x"
+            },
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ]
+                },
+                "name": "y"
+            }
+        ],
+        "memberof": "OverlayWindow",
+        "longname": "OverlayWindow.setPosition",
+        "scope": "static"
+    },
+    {
+        "kind": "function",
+        "name": "getSize",
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Vec2"
+                    ]
+                }
+            }
+        ],
+        "memberof": "OverlayWindow",
+        "longname": "OverlayWindow.getSize",
+        "scope": "static"
+    },
+    {
+        "kind": "function",
+        "name": "setSize",
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "Vec2"
+                    ]
+                },
+                "name": "size"
+            }
+        ],
+        "memberof": "OverlayWindow",
+        "longname": "OverlayWindow.setSize",
+        "scope": "static"
+    },
+    {
+        "kind": "function",
+        "name": "setSize",
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ]
+                },
+                "name": "width"
+            },
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ]
+                },
+                "name": "height"
+            }
+        ],
+        "memberof": "OverlayWindow",
+        "longname": "OverlayWindow.setSize",
+        "scope": "static"
+    },
+    {
+        "kind": "function",
+        "name": "setTitle",
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "string"
+                    ]
+                },
+                "name": "title"
+            }
+        ],
+        "memberof": "OverlayWindow",
+        "longname": "OverlayWindow.setTitle",
+        "scope": "static"
+    },
+    {
+        "kind": "function",
+        "name": "raise",
+        "memberof": "OverlayWindow",
+        "longname": "OverlayWindow.raise",
+        "scope": "static"
+    },
+    {
+        "kind": "function",
+        "name": "close",
+        "memberof": "OverlayWindow",
+        "longname": "OverlayWindow.close",
+        "scope": "static"
+    },
+    {
+        "kind": "function",
+        "name": "getEventBridge",
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "object"
+                    ]
+                }
+            }
+        ],
+        "memberof": "OverlayWindow",
+        "longname": "OverlayWindow.getEventBridge",
+        "scope": "static"
+    },
+    {
+        "kind": "function",
+        "name": "sendToQml",
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "object"
+                    ]
+                },
+                "name": "message"
+            }
+        ],
+        "memberof": "OverlayWindow",
+        "longname": "OverlayWindow.sendToQml",
+        "scope": "static"
+    },
+    {
+        "kind": "function",
+        "name": "clearDebugWindow",
+        "memberof": "OverlayWindow",
+        "longname": "OverlayWindow.clearDebugWindow",
+        "scope": "static"
+    },
+    {
+        "kind": "function",
+        "name": "emitScriptEvent",
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "object"
+                    ]
+                },
+                "name": "message"
+            }
+        ],
+        "memberof": "OverlayWindow",
+        "longname": "OverlayWindow.emitScriptEvent",
+        "scope": "static"
+    },
+    {
+        "kind": "function",
+        "name": "emitWebEvent",
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "object"
+                    ]
+                },
+                "name": "message"
+            }
+        ],
+        "memberof": "OverlayWindow",
+        "longname": "OverlayWindow.emitWebEvent",
+        "scope": "static"
+    },
+    {
+        "kind": "function",
+        "name": "visibleChanged",
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Signal"
+                    ]
+                }
+            }
+        ],
+        "memberof": "OverlayWindow",
+        "longname": "OverlayWindow.visibleChanged",
+        "scope": "static"
+    },
+    {
+        "kind": "function",
+        "name": "positionChanged",
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Signal"
+                    ]
+                }
+            }
+        ],
+        "memberof": "OverlayWindow",
+        "longname": "OverlayWindow.positionChanged",
+        "scope": "static"
+    },
+    {
+        "kind": "function",
+        "name": "sizeChanged",
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Signal"
+                    ]
+                }
+            }
+        ],
+        "memberof": "OverlayWindow",
+        "longname": "OverlayWindow.sizeChanged",
+        "scope": "static"
+    },
+    {
+        "kind": "function",
+        "name": "moved",
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "Vec2"
+                    ]
+                },
+                "name": "position"
+            }
+        ],
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Signal"
+                    ]
+                }
+            }
+        ],
+        "memberof": "OverlayWindow",
+        "longname": "OverlayWindow.moved",
+        "scope": "static"
+    },
+    {
+        "kind": "function",
+        "name": "resized",
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "Size"
+                    ]
+                },
+                "name": "size"
+            }
+        ],
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Signal"
+                    ]
+                }
+            }
+        ],
+        "memberof": "OverlayWindow",
+        "longname": "OverlayWindow.resized",
+        "scope": "static"
+    },
+    {
+        "kind": "function",
+        "name": "closed",
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Signal"
+                    ]
+                }
+            }
+        ],
+        "memberof": "OverlayWindow",
+        "longname": "OverlayWindow.closed",
+        "scope": "static"
+    },
+    {
+        "kind": "function",
+        "name": "fromQml",
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "object"
+                    ]
+                },
+                "name": "message"
+            }
+        ],
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Signal"
+                    ]
+                }
+            }
+        ],
+        "memberof": "OverlayWindow",
+        "longname": "OverlayWindow.fromQml",
+        "scope": "static"
+    },
+    {
+        "kind": "function",
+        "name": "scriptEventReceived",
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "object"
+                    ]
+                },
+                "name": "message"
+            }
+        ],
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Signal"
+                    ]
+                }
+            }
+        ],
+        "memberof": "OverlayWindow",
+        "longname": "OverlayWindow.scriptEventReceived",
+        "scope": "static"
+    },
+    {
+        "kind": "function",
+        "name": "webEventReceived",
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "object"
+                    ]
+                },
+                "name": "message"
+            }
+        ],
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Signal"
+                    ]
+                }
+            }
+        ],
+        "memberof": "OverlayWindow",
+        "longname": "OverlayWindow.webEventReceived",
         "scope": "static"
     },
     {
@@ -41999,6 +48776,135 @@
         ],
         "memberof": "TabletButtonProxy",
         "longname": "TabletButtonProxy.ButtonProperties",
+        "scope": "static"
+    },
+    {
+        "kind": "class",
+        "name": "ToolbarButtonProxy",
+        "hifiInterface": true,
+        "hifiClientEntity": true,
+        "longname": "ToolbarButtonProxy",
+        "scope": "global",
+        "description": "<br><br><table><tr><th>Available in:</th><td>Interface Scripts</td><td>Client Entity Scripts</td></tr></table>"
+    },
+    {
+        "kind": "function",
+        "name": "editProperties",
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "object"
+                    ]
+                },
+                "name": "properties"
+            }
+        ],
+        "memberof": "ToolbarButtonProxy",
+        "longname": "ToolbarButtonProxy#editProperties",
+        "scope": "instance"
+    },
+    {
+        "kind": "function",
+        "name": "clicked",
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Signal"
+                    ]
+                }
+            }
+        ],
+        "memberof": "ToolbarButtonProxy",
+        "longname": "ToolbarButtonProxy#clicked",
+        "scope": "instance"
+    },
+    {
+        "kind": "class",
+        "name": "ToolbarProxy",
+        "hifiInterface": true,
+        "hifiClientEntity": true,
+        "longname": "ToolbarProxy",
+        "scope": "global",
+        "description": "<br><br><table><tr><th>Available in:</th><td>Interface Scripts</td><td>Client Entity Scripts</td></tr></table>"
+    },
+    {
+        "kind": "function",
+        "name": "addButton",
+        "properties": [
+            {
+                "type": {
+                    "names": [
+                        "object"
+                    ]
+                },
+                "name": "properties"
+            }
+        ],
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "ToolbarButtonProxy"
+                    ]
+                }
+            }
+        ],
+        "memberof": "ToolbarProxy",
+        "longname": "ToolbarProxy#addButton",
+        "scope": "instance"
+    },
+    {
+        "kind": "function",
+        "name": "removeButton",
+        "properties": [
+            {
+                "type": {
+                    "names": [
+                        "string"
+                    ]
+                },
+                "name": "name"
+            }
+        ],
+        "memberof": "ToolbarProxy",
+        "longname": "ToolbarProxy#removeButton",
+        "scope": "instance"
+    },
+    {
+        "kind": "namespace",
+        "name": "Toolbars",
+        "hifiInterface": true,
+        "hifiClientEntity": true,
+        "longname": "Toolbars",
+        "scope": "global",
+        "description": "<br><br><table><tr><th>Available in:</th><td>Interface Scripts</td><td>Client Entity Scripts</td></tr></table>"
+    },
+    {
+        "kind": "function",
+        "name": "getToolbar",
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "string"
+                    ]
+                },
+                "name": "toolbarID"
+            }
+        ],
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "ToolbarProxy"
+                    ]
+                }
+            }
+        ],
+        "memberof": "Toolbars",
+        "longname": "Toolbars.getToolbar",
         "scope": "static"
     },
     {
