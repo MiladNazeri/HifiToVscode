@@ -20,6 +20,7 @@ var vsCodeArray = [];
     hifiDoc.forEach( item => {
         let body = ``;
         let bodyParams = [];
+        item.longname = item.longname.replace(/\(0\)/g,"");
         if (item.params){
             bodyParams = item.params.map( (param, index) => {
                 return `\${${index+1}:${param.name}${param.type?`\: ${param.type.names[0]}`:''}}`
